@@ -221,6 +221,7 @@ static const CGFloat kRevealDeltaY = -180.0f;
     BOOL hide_contact = YES;
     NSArray *inputParts = [input componentsSeparatedByString:@" "];
     if (inputParts.count > 2 || inputParts.count == 0) {
+        self.lblShellOutput.text = @"Too many arguments";
         return;
     }
     NSString *command = [inputParts objectAtIndex:0];

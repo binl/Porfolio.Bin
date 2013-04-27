@@ -38,6 +38,10 @@
 		CA3C9785172B949D00E9FAC1 /* coverpage.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9784172B949D00E9FAC1 /* coverpage.plist */; };
 		CA3C9787172B989800E9FAC1 /* later_note.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9786172B989800E9FAC1 /* later_note.plist */; };
 		CA3C978A172BA30700E9FAC1 /* CNExtHeaderVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C9789172BA30700E9FAC1 /* CNExtHeaderVIew.m */; };
+		CA3C9790172BBE4E00E9FAC1 /* contact_me.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3C978C172BBE4E00E9FAC1 /* contact_me.plist */; };
+		CA3C9791172BBE4E00E9FAC1 /* imoffice.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3C978D172BBE4E00E9FAC1 /* imoffice.plist */; };
+		CA3C9792172BBE4E00E9FAC1 /* motlas.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3C978E172BBE4E00E9FAC1 /* motlas.plist */; };
+		CA3C9793172BBE4E00E9FAC1 /* SFU_mportal.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3C978F172BBE4E00E9FAC1 /* SFU_mportal.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -83,6 +87,10 @@
 		CA3C9786172B989800E9FAC1 /* later_note.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = later_note.plist; sourceTree = "<group>"; };
 		CA3C9788172BA30700E9FAC1 /* CNExtHeaderVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNExtHeaderVIew.h; sourceTree = "<group>"; };
 		CA3C9789172BA30700E9FAC1 /* CNExtHeaderVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNExtHeaderVIew.m; sourceTree = "<group>"; };
+		CA3C978C172BBE4E00E9FAC1 /* contact_me.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = contact_me.plist; sourceTree = "<group>"; };
+		CA3C978D172BBE4E00E9FAC1 /* imoffice.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = imoffice.plist; sourceTree = "<group>"; };
+		CA3C978E172BBE4E00E9FAC1 /* motlas.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = motlas.plist; sourceTree = "<group>"; };
+		CA3C978F172BBE4E00E9FAC1 /* SFU_mportal.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = SFU_mportal.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +231,10 @@
 		CA3C976C172B5BA900E9FAC1 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				CA3C978C172BBE4E00E9FAC1 /* contact_me.plist */,
+				CA3C978D172BBE4E00E9FAC1 /* imoffice.plist */,
+				CA3C978E172BBE4E00E9FAC1 /* motlas.plist */,
+				CA3C978F172BBE4E00E9FAC1 /* SFU_mportal.plist */,
 				CA3C976F172B5D1200E9FAC1 /* later_note_img */,
 				CA3C9784172B949D00E9FAC1 /* coverpage.plist */,
 				CA3C9786172B989800E9FAC1 /* later_note.plist */,
@@ -323,6 +335,10 @@
 				CA3C977F172B67C300E9FAC1 /* our_timer.png in Resources */,
 				CA3C9785172B949D00E9FAC1 /* coverpage.plist in Resources */,
 				CA3C9787172B989800E9FAC1 /* later_note.plist in Resources */,
+				CA3C9790172BBE4E00E9FAC1 /* contact_me.plist in Resources */,
+				CA3C9791172BBE4E00E9FAC1 /* imoffice.plist in Resources */,
+				CA3C9792172BBE4E00E9FAC1 /* motlas.plist in Resources */,
+				CA3C9793172BBE4E00E9FAC1 /* SFU_mportal.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

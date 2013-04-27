@@ -69,6 +69,7 @@ static NSString *kImageKey = @"image";
     self.scrollShowCase.showsVerticalScrollIndicator = NO;
     self.scrollShowCase.scrollsToTop = NO;
     self.scrollShowCase.delegate = self;
+    self.scrollShowCase.contentOffset = CGPointMake(0, 0);
     
     // load the visible page
     // load the page on either side to avoid flashes when the user starts scrolling

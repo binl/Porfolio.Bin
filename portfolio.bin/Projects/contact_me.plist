@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>You Found Me!</string>
+	<key>parentDir</key>
+	<string>coverpage</string>
+	<key>dirInfo</key>
+	<dict/>
+	<key>app_url</key>
+	<string>binliutech@gmail.com</string>
+	<key>content</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>Can I work for Apple? PLEASE?</string>
+			<key>image</key>
+			<string>sc_bg_image.jpg</string>
+		</dict>
+	</array>
+</dict>
+</plist>
