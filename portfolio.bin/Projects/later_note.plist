@@ -4,6 +4,12 @@
 <array>
 	<dict>
 		<key>description</key>
+		<string>Later Note, for lazy dudes like me XD</string>
+		<key>image</key>
+		<string>cover.png</string>
+	</dict>
+	<dict>
+		<key>description</key>
 		<string>Started just to address my personal urgent needs</string>
 		<key>image</key>
 		<string>angry_girlfriend.jpg</string>
@@ -16,21 +22,15 @@
 	</dict>
 	<dict>
 		<key>description</key>
-		<string>Started just to address my personal urgent needs</string>
+		<string>So I did this instead!</string>
 		<key>image</key>
-		<string>classic_alarm.png</string>
+		<string>our_timer.png</string>
 	</dict>
 	<dict>
 		<key>description</key>
-		<string>Started just to address my personal urgent needs</string>
+		<string>Then I added built-in achievements to reward myself</string>
 		<key>image</key>
-		<string>classic_alarm.png</string>
-	</dict>
-	<dict>
-		<key>description</key>
-		<string>Started just to address my personal urgent needs</string>
-		<key>image</key>
-		<string>classic_alarm.png</string>
+		<string>achievements.png</string>
 	</dict>
 </array>
 </plist>
