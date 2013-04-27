@@ -10,48 +10,51 @@
 
 #import "CNShowCoverCell.h"
 #import "CNShowProjCell.h"
-
+#import "CNNavHeaderView.h"
+#import "CNExtHeaderVIew.h"
 /* Libs */
 #import "UIImage+StackBlur.h"
 
+
 #define SECTION_HDR_WIDTH 320
 #define SECTION_HDR_HEIGHT 40
+
+#define HELP_MSG @"How to use shell in TinyFS?\n\
+- In short, like any other shell!\n\
+\n\
+* \"cd\" to navigate through folders\n\
+* \"ls\" to list all files in the folder\n\
+* \"man\" to display this help msg\n\
+* swipe to right or \"quit\" to leave shell"
+
+static const CGFloat kRevealDeltaY = -180.0f;
 
 @interface CNViewController () {
     UIImage *_original_bg;
     UIImage *_transition_1_bg;
     UIImage *_transition_2_bg;
     UIImage *_blurred_bg;
+    
+    NSString *_currentShow;
+    
+    CNExtHeaderVIew *_extHdr;
 }
 @end
 
 @implementation CNViewController
 
-@synthesize tableShowcase;
+@synthesize tableShowcase, viewShellContainer, imageBg;
+@synthesize txtShellInput;
+@synthesize viewShellOverlay, lblShellOutput;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
     //Set up the headerView
     CGRect frame = CGRectMake(0,-480,320,480);
-    UIView *headerView = [[UIView alloc]initWithFrame:frame];
-    headerView.autoresizingMask = UIViewAutoresizingFlexibleWidth;
-    headerView.backgroundColor = [UIColor colorWithRed:0 green:0 blue:0 alpha:0.7];
-
-    UILabel *labelPull = [[UILabel alloc]
-                          initWithFrame:CGRectMake(0.0f, frame.size.height - 48.0f
-                                                   ,frame.size.width, 20.0f )];
-    [labelPull setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:15]];
-    [labelPull setTextAlignment:NSTextAlignmentCenter];
-    [labelPull setBackgroundColor:[UIColor clearColor]];
-    [labelPull setTextColor:[UIColor darkTextColor]];
-    [labelPull setShadowColor:[UIColor lightGrayColor]];
-    [labelPull setShadowOffset:CGSizeMake(-1, 1)];
-    labelPull.text = @"Pull to reveal my gift :-)";
-    
-    [headerView addSubview:labelPull];
-    
-    [self.tableShowcase addSubview:headerView];
+    _extHdr = [[CNExtHeaderVIew alloc] initWithFrame:frame];
+    [self.tableShowcase addSubview:_extHdr];
     
     _original_bg=[UIImage imageNamed:@"portrait_bg.jpg"];
     _transition_1_bg = [_original_bg stackBlur:4];
@@ -59,7 +62,12 @@
     _blurred_bg = [_original_bg stackBlur:12];
     [self.imageBg setImage:_original_bg];
     
-	// Do any additional setup after loading the view, typically from a nib.
+    _currentShow = @"coverpage";
+}
+
+
+- (void)viewWillAppear:(BOOL)animated {
+    self.lblShellOutput.text = HELP_MSG;
 }
 
 - (void)didReceiveMemoryWarning
@@ -77,27 +85,14 @@
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section{
     //CNShowHeaderView *hdrView = [[CNShowHeaderView alloc] init];
-    UIView *hdrView = [[UIView alloc] initWithFrame:
+    CNNavHeaderView *hdrView = [[CNNavHeaderView alloc] initWithFrame:
                        CGRectMake(0, 0, SECTION_HDR_WIDTH, SECTION_HDR_HEIGHT)];
-    [hdrView setBackgroundColor:[UIColor clearColor]];
     
-    UIView *bgView = [[UIView alloc] initWithFrame:
-                      CGRectMake(0, 0, SECTION_HDR_WIDTH, SECTION_HDR_HEIGHT)];
+    UIButton *btnShell = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    [btnShell addTarget:self action:@selector(displayShell) forControlEvents:UIControlEventTouchUpInside];
+    btnShell.frame = CGRectMake(280, 0, 40, 40);
     
-    [bgView setBackgroundColor:[UIColor darkTextColor]];
-    [bgView setAlpha:0.5];
-    
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:
-                           CGRectMake(0, 0, SECTION_HDR_WIDTH, SECTION_HDR_HEIGHT)];
-    [titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:26]];
-    [titleLabel setTextAlignment:NSTextAlignmentCenter];
-    [titleLabel setBackgroundColor:[UIColor clearColor]];
-    [titleLabel setTextColor:[UIColor whiteColor]];
-    titleLabel.text = @"Portfolio";
-    
-    [hdrView addSubview: bgView];
-    [hdrView addSubview: titleLabel];
-    
+    [hdrView addSubview:btnShell];
     return hdrView;
 }
 
@@ -135,7 +130,7 @@
         [(CNShowCoverCell *)cell initCell];
     }
     else {
-        [(CNShowProjCell *)cell initCellWithProject:@"later_note"];
+        [(CNShowProjCell *)cell initCellWithProject:_currentShow];
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -145,7 +140,14 @@
 #pragma mark - scrolling behavior
 -(void)scrollViewDidScroll:(UIScrollView *)scrollView{
     if ([scrollView isEqual:self.tableShowcase]==YES) {
-        if (scrollView.contentOffset.y < 5.0f) {
+        if (scrollView.contentOffset.y > kRevealDeltaY
+            && scrollView.contentOffset.y < 0.0f) {
+            [_extHdr revealSecret:NO];
+        }
+        else if (scrollView.contentOffset.y < kRevealDeltaY) {
+            [_extHdr revealSecret:YES];
+        }
+        else if (scrollView.contentOffset.y < 5.0f) {
             [self.imageBg setImage:_original_bg];
         }
         else if(scrollView.contentOffset.y < 15.0f){
@@ -158,6 +160,136 @@
             [self.imageBg setImage:_blurred_bg];
         }
     }
+}
+
+#pragma mark - shell actions
+
+-(void)displayShell {
+    [self makeShellShow:YES];
+    [self.txtShellInput becomeFirstResponder];
+}
+
+-(IBAction)dismissShell:(id)sender {
+    [self makeShellShow:NO];
+    [self.txtShellInput resignFirstResponder];
+    [self.viewShellOverlay setHidden:YES];
+}
+
+-(void)makeShellShow:(BOOL)is_show {
+    CGRect tmpFrame = self.viewShellContainer.frame;
+    if (is_show && tmpFrame.origin.x != 0) {
+        tmpFrame.origin.x = 0;
+        [UIView animateWithDuration:0.5 animations:^{
+            self.viewShellContainer.frame = tmpFrame;
+        }];
+    }
+    else if (!is_show && tmpFrame.origin.x == 0){
+        tmpFrame.origin.x = 320;
+        [UIView animateWithDuration:0.5 animations:^{
+            self.viewShellContainer.frame = tmpFrame;
+        }];
+    }
+}
+
+#pragma mark - textfield delegates
+- (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
+    [self.tableShowcase setContentOffset:CGPointMake(0, 440) animated:YES];
+    [self.viewShellOverlay setHidden:NO];
+    return YES;
+}
+
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    if ([textField.text length] == 0) {
+        [self dismissShell:nil];
+        return NO;
+    }
+    
+    [self parseline:textField.text];
+    textField.text = @"";
+    //_currentShow = textField.text;
+    //[self dismissShell:nil];
+    return YES;
+}
+
+
+#pragma mark - shell parseline
+-(void)parseline:(NSString *)input {
+    NSString *path = [[NSBundle mainBundle] pathForResource:_currentShow ofType:@"plist"];
+    NSDictionary *currentFolderInfo = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    BOOL hide_contact = YES;
+    NSArray *inputParts = [input componentsSeparatedByString:@" "];
+    if (inputParts.count > 2 || inputParts.count == 0) {
+        return;
+    }
+    NSString *command = [inputParts objectAtIndex:0];
+    if ([command isEqualToString:@"cd"]) {
+        if (inputParts.count != 2) {
+            return;
+        }
+        
+        NSString *targetFolder = [inputParts objectAtIndex:1];
+        if ([targetFolder isEqualToString:@".."]) {
+            NSString *parentDir = [currentFolderInfo objectForKey:@"parentDir"];
+            if (parentDir == NULL) {
+                self.lblShellOutput.text = @"We are in Root Directory already";
+                return;
+            }
+            _currentShow = parentDir;
+            [self updateContent];
+        }
+        else {
+            NSDictionary *childDirs = [currentFolderInfo objectForKey:@"dirInfo"];
+            NSString *childDir = [childDirs objectForKey:targetFolder];
+            if (childDir == NULL) {
+                self.lblShellOutput.text = @"Directory not found";
+                return;
+            }
+            _currentShow = childDir;
+            [self updateContent];
+        }
+    }
+    else if ([command isEqualToString:@"ls"]) {
+        NSArray *list = [[currentFolderInfo objectForKey:@"dirInfo"] allKeys];
+        if (list.count == 0) {
+            self.lblShellOutput.text = @"Directory Empty";
+        }
+        else {
+            NSMutableString *lsOutput = [NSMutableString stringWithString:@"Listing Files:\n"];
+            
+            if (inputParts.count == 2 &&
+                [[inputParts objectAtIndex:1] isEqualToString:@"-a"]) {
+                hide_contact = NO;
+            }
+            
+            for (NSString *key in list) {
+                if ([key isEqualToString:@".contact_me"] && hide_contact) {
+                    continue;
+                }
+                [lsOutput appendFormat:@"\t\t-%@\n",key];
+            }
+            
+            self.lblShellOutput.text = lsOutput;
+        }
+    }
+    else if ([command isEqualToString:@"man"]) {
+        self.lblShellOutput.text = HELP_MSG;
+    }
+    else if ([command isEqualToString:@"quit"]) {
+        [self dismissShell:nil];
+    }
+    else
+        self.lblShellOutput.text = @"Command not found, use \"man\" to learn more";
+    return;
+}
+
+-(void)updateContent{
+    [self.tableShowcase reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:1 inSection:0]] withRowAnimation:UITableViewRowAnimationLeft];
+    
+    [self.txtShellInput resignFirstResponder];
+    
+    [self.viewShellOverlay setHidden:YES];
 }
 
 @end

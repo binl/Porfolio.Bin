@@ -21,7 +21,6 @@
 		CA3C970C1729C59C00E9FAC1 /* portrait_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA3C970B1729C59C00E9FAC1 /* portrait_bg.jpg */; };
 		CA3C9711172A001800E9FAC1 /* CNShowCoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C970F172A001800E9FAC1 /* CNShowCoverCell.m */; };
 		CA3C9712172A001800E9FAC1 /* CNShowCoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9710172A001800E9FAC1 /* CNShowCoverCell.xib */; };
-		CA3C9715172A051E00E9FAC1 /* CNtableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C9714172A051E00E9FAC1 /* CNtableViewController.m */; };
 		CA3C9750172A0F3B00E9FAC1 /* CNShowProjCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C974E172A0F3B00E9FAC1 /* CNShowProjCell.m */; };
 		CA3C9751172A0F3B00E9FAC1 /* CNShowProjCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3C974F172A0F3B00E9FAC1 /* CNShowProjCell.xib */; };
 		CA3C9754172A164000E9FAC1 /* test_cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9753172A164000E9FAC1 /* test_cover.jpg */; };
@@ -30,12 +29,15 @@
 		CA3C9768172B26E900E9FAC1 /* CNProjContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C9766172B26E800E9FAC1 /* CNProjContentViewController.m */; };
 		CA3C9769172B26E900E9FAC1 /* CNProjContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9767172B26E800E9FAC1 /* CNProjContentViewController.xib */; };
 		CA3C976B172B37E500E9FAC1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3C976A172B37E500E9FAC1 /* QuartzCore.framework */; };
-		CA3C976E172B5BD500E9FAC1 /* later_note.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3C976D172B5BD500E9FAC1 /* later_note.plist */; };
 		CA3C9772172B5EB800E9FAC1 /* angry_girlfriend.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9770172B5EB800E9FAC1 /* angry_girlfriend.jpg */; };
 		CA3C9773172B5EB800E9FAC1 /* classic_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9771172B5EB800E9FAC1 /* classic_alarm.png */; };
 		CA3C9777172B64E900E9FAC1 /* cover.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9776172B64E900E9FAC1 /* cover.png */; };
 		CA3C977E172B67C300E9FAC1 /* achievements.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3C977C172B67C200E9FAC1 /* achievements.png */; };
 		CA3C977F172B67C300E9FAC1 /* our_timer.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3C977D172B67C200E9FAC1 /* our_timer.png */; };
+		CA3C9783172B8C7B00E9FAC1 /* CNNavHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C9782172B8C7B00E9FAC1 /* CNNavHeaderView.m */; };
+		CA3C9785172B949D00E9FAC1 /* coverpage.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9784172B949D00E9FAC1 /* coverpage.plist */; };
+		CA3C9787172B989800E9FAC1 /* later_note.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9786172B989800E9FAC1 /* later_note.plist */; };
+		CA3C978A172BA30700E9FAC1 /* CNExtHeaderVIew.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C9789172BA30700E9FAC1 /* CNExtHeaderVIew.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -59,8 +61,6 @@
 		CA3C970E172A001800E9FAC1 /* CNShowCoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNShowCoverCell.h; sourceTree = "<group>"; };
 		CA3C970F172A001800E9FAC1 /* CNShowCoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNShowCoverCell.m; sourceTree = "<group>"; };
 		CA3C9710172A001800E9FAC1 /* CNShowCoverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CNShowCoverCell.xib; sourceTree = "<group>"; };
-		CA3C9713172A051E00E9FAC1 /* CNtableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNtableViewController.h; sourceTree = "<group>"; };
-		CA3C9714172A051E00E9FAC1 /* CNtableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNtableViewController.m; sourceTree = "<group>"; };
 		CA3C974D172A0F3B00E9FAC1 /* CNShowProjCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNShowProjCell.h; sourceTree = "<group>"; };
 		CA3C974E172A0F3B00E9FAC1 /* CNShowProjCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNShowProjCell.m; sourceTree = "<group>"; };
 		CA3C974F172A0F3B00E9FAC1 /* CNShowProjCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CNShowProjCell.xib; sourceTree = "<group>"; };
@@ -72,12 +72,17 @@
 		CA3C9766172B26E800E9FAC1 /* CNProjContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNProjContentViewController.m; sourceTree = "<group>"; };
 		CA3C9767172B26E800E9FAC1 /* CNProjContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CNProjContentViewController.xib; sourceTree = "<group>"; };
 		CA3C976A172B37E500E9FAC1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		CA3C976D172B5BD500E9FAC1 /* later_note.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = later_note.plist; sourceTree = "<group>"; };
 		CA3C9770172B5EB800E9FAC1 /* angry_girlfriend.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angry_girlfriend.jpg; sourceTree = "<group>"; };
 		CA3C9771172B5EB800E9FAC1 /* classic_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classic_alarm.png; sourceTree = "<group>"; };
 		CA3C9776172B64E900E9FAC1 /* cover.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cover.png; sourceTree = "<group>"; };
 		CA3C977C172B67C200E9FAC1 /* achievements.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = achievements.png; sourceTree = "<group>"; };
 		CA3C977D172B67C200E9FAC1 /* our_timer.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = our_timer.png; sourceTree = "<group>"; };
+		CA3C9781172B8C7B00E9FAC1 /* CNNavHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNNavHeaderView.h; sourceTree = "<group>"; };
+		CA3C9782172B8C7B00E9FAC1 /* CNNavHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNNavHeaderView.m; sourceTree = "<group>"; };
+		CA3C9784172B949D00E9FAC1 /* coverpage.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = coverpage.plist; sourceTree = "<group>"; };
+		CA3C9786172B989800E9FAC1 /* later_note.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = later_note.plist; sourceTree = "<group>"; };
+		CA3C9788172BA30700E9FAC1 /* CNExtHeaderVIew.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNExtHeaderVIew.h; sourceTree = "<group>"; };
+		CA3C9789172BA30700E9FAC1 /* CNExtHeaderVIew.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNExtHeaderVIew.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +131,7 @@
 		CA3C96EC1729C45700E9FAC1 /* portfolio.bin */ = {
 			isa = PBXGroup;
 			children = (
+				CA3C9780172B8C4400E9FAC1 /* CustomViews */,
 				CA3C9759172A373A00E9FAC1 /* openSourceLibs */,
 				CA3C970D1729FFD500E9FAC1 /* showcaseTableCells */,
 				CA3C96F51729C45800E9FAC1 /* CNAppDelegate.h */,
@@ -135,8 +141,6 @@
 				CA3C97021729C45800E9FAC1 /* CNViewController.m */,
 				CA3C97091729C54E00E9FAC1 /* Resources */,
 				CA3C96ED1729C45700E9FAC1 /* Supporting Files */,
-				CA3C9713172A051E00E9FAC1 /* CNtableViewController.h */,
-				CA3C9714172A051E00E9FAC1 /* CNtableViewController.m */,
 			);
 			path = portfolio.bin;
 			sourceTree = "<group>";
@@ -220,7 +224,8 @@
 			isa = PBXGroup;
 			children = (
 				CA3C976F172B5D1200E9FAC1 /* later_note_img */,
-				CA3C976D172B5BD500E9FAC1 /* later_note.plist */,
+				CA3C9784172B949D00E9FAC1 /* coverpage.plist */,
+				CA3C9786172B989800E9FAC1 /* later_note.plist */,
 			);
 			path = Projects;
 			sourceTree = "<group>";
@@ -235,6 +240,17 @@
 				CA3C9771172B5EB800E9FAC1 /* classic_alarm.png */,
 			);
 			path = later_note_img;
+			sourceTree = "<group>";
+		};
+		CA3C9780172B8C4400E9FAC1 /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C9781172B8C7B00E9FAC1 /* CNNavHeaderView.h */,
+				CA3C9782172B8C7B00E9FAC1 /* CNNavHeaderView.m */,
+				CA3C9788172BA30700E9FAC1 /* CNExtHeaderVIew.h */,
+				CA3C9789172BA30700E9FAC1 /* CNExtHeaderVIew.m */,
+			);
+			path = CustomViews;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -300,12 +316,13 @@
 				CA3C9754172A164000E9FAC1 /* test_cover.jpg in Resources */,
 				CA3C9756172A17A600E9FAC1 /* sc_bg_image.jpg in Resources */,
 				CA3C9769172B26E900E9FAC1 /* CNProjContentViewController.xib in Resources */,
-				CA3C976E172B5BD500E9FAC1 /* later_note.plist in Resources */,
 				CA3C9772172B5EB800E9FAC1 /* angry_girlfriend.jpg in Resources */,
 				CA3C9773172B5EB800E9FAC1 /* classic_alarm.png in Resources */,
 				CA3C9777172B64E900E9FAC1 /* cover.png in Resources */,
 				CA3C977E172B67C300E9FAC1 /* achievements.png in Resources */,
 				CA3C977F172B67C300E9FAC1 /* our_timer.png in Resources */,
+				CA3C9785172B949D00E9FAC1 /* coverpage.plist in Resources */,
+				CA3C9787172B989800E9FAC1 /* later_note.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -320,10 +337,11 @@
 				CA3C96F71729C45800E9FAC1 /* CNAppDelegate.m in Sources */,
 				CA3C97031729C45800E9FAC1 /* CNViewController.m in Sources */,
 				CA3C9711172A001800E9FAC1 /* CNShowCoverCell.m in Sources */,
-				CA3C9715172A051E00E9FAC1 /* CNtableViewController.m in Sources */,
 				CA3C9750172A0F3B00E9FAC1 /* CNShowProjCell.m in Sources */,
 				CA3C975E172A376700E9FAC1 /* UIImage+StackBlur.m in Sources */,
 				CA3C9768172B26E900E9FAC1 /* CNProjContentViewController.m in Sources */,
+				CA3C9783172B8C7B00E9FAC1 /* CNNavHeaderView.m in Sources */,
+				CA3C978A172BA30700E9FAC1 /* CNExtHeaderVIew.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

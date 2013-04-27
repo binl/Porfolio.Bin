@@ -20,25 +20,104 @@
                                     <outlet property="delegate" destination="2" id="9EH-Gr-6yh"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="C2o-4n-OV7">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="AGs-x9-wKX">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="165" id="e0J-Rh-5zt"/>
+                                        </constraints>
+                                        <string key="text">How to use shell in TinyFS?
+- In short, like any other shell!
+
+     * "cd" to navigate through folders
+     * "ls" to list all files in the folder</string>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <constraints>
+                                    <constraint firstItem="AGs-x9-wKX" firstAttribute="leading" secondItem="C2o-4n-OV7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="P7L-Hg-ilg"/>
+                                    <constraint firstAttribute="trailing" secondItem="AGs-x9-wKX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="g9e-5m-EF7"/>
+                                    <constraint firstItem="AGs-x9-wKX" firstAttribute="top" secondItem="C2o-4n-OV7" secondAttribute="top" constant="67" id="svB-Uh-z16"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" restorationIdentifier="shell" translatesAutoresizingMaskIntoConstraints="NO" id="R88-7e-P1B" userLabel="ShellContainer" colorLabel="IBBuiltInLabel-Red">
+                                <subviews>
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" text="&lt; B.Shell ~$" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW4-2f-KFd">
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="21" id="9UX-s0-Zxg"/>
+                                            <constraint firstAttribute="width" constant="80" id="Pmi-eV-hoJ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="0.0" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter Shell Command Here" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DUK-AI-mQn">
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="220" id="4Bw-U0-FfS"/>
+                                            <constraint firstAttribute="height" constant="30" id="oUj-8t-dTY"/>
+                                        </constraints>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <outlet property="delegate" destination="2" id="Gz7-DD-ate"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstItem="DUK-AI-mQn" firstAttribute="leading" secondItem="R88-7e-P1B" secondAttribute="leading" constant="88" id="SdX-Yl-KWH"/>
+                                    <constraint firstItem="cW4-2f-KFd" firstAttribute="leading" secondItem="R88-7e-P1B" secondAttribute="leading" constant="5" id="XT4-Qf-Y8G"/>
+                                    <constraint firstItem="cW4-2f-KFd" firstAttribute="top" secondItem="R88-7e-P1B" secondAttribute="top" constant="9" id="daD-Pd-ZI7"/>
+                                    <constraint firstItem="DUK-AI-mQn" firstAttribute="centerY" secondItem="R88-7e-P1B" secondAttribute="centerY" type="default" id="mAq-FP-KdA"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Hwt-7B-DAx" appends="YES" id="59T-cX-9rg"/>
+                                </connections>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="CRr-Id-Wgf" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="0Xb-Xx-jn2"/>
                             <constraint firstItem="CRr-Id-Wgf" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="1rU-IL-B4f"/>
+                            <constraint firstItem="C2o-4n-OV7" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="4Hr-6p-4wb"/>
                             <constraint firstItem="6DX-DD-VOj" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="4kF-cx-XoC"/>
+                            <constraint firstItem="C2o-4n-OV7" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="5i5-cQ-RY9"/>
                             <constraint firstItem="6DX-DD-VOj" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Cen-0R-ZIx"/>
                             <constraint firstItem="6DX-DD-VOj" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="I7Z-kU-yYZ"/>
+                            <constraint firstAttribute="bottom" secondItem="R88-7e-P1B" secondAttribute="bottom" priority="1" constant="508" type="user" id="JvB-gZ-9Eo"/>
+                            <constraint firstItem="R88-7e-P1B" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" priority="1" type="user" id="W9y-Tk-gkU"/>
                             <constraint firstItem="6DX-DD-VOj" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Wze-lz-LkB"/>
+                            <constraint firstItem="R88-7e-P1B" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="320" id="bVR-dS-Q8j"/>
+                            <constraint firstItem="R88-7e-P1B" firstAttribute="top" secondItem="3" secondAttribute="top" priority="1" type="user" id="cx8-zS-UX3"/>
+                            <constraint firstAttribute="bottom" secondItem="R88-7e-P1B" secondAttribute="bottom" constant="420" id="etm-zX-yUN"/>
+                            <constraint firstItem="C2o-4n-OV7" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="kl9-Cj-CPP"/>
                             <constraint firstItem="CRr-Id-Wgf" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="mQB-He-DTR"/>
+                            <constraint firstAttribute="trailing" secondItem="R88-7e-P1B" secondAttribute="trailing" constant="-320" id="mWa-4F-n2W"/>
+                            <constraint firstAttribute="bottom" secondItem="C2o-4n-OV7" secondAttribute="bottom" constant="-20" id="qFc-uq-Ljv"/>
                             <constraint firstItem="CRr-Id-Wgf" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="x5d-3J-5Rf"/>
+                            <constraint firstItem="R88-7e-P1B" firstAttribute="leading" secondItem="3" secondAttribute="leading" priority="1" type="user" id="zlL-tF-HbR"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="imageBg" destination="6DX-DD-VOj" id="J8b-zc-7eq"/>
+                        <outlet property="lblShellOutput" destination="AGs-x9-wKX" id="t4P-DK-uPP"/>
                         <outlet property="tableShowcase" destination="CRr-Id-Wgf" id="sk1-5H-1ip"/>
+                        <outlet property="txtShellInput" destination="DUK-AI-mQn" id="icA-6M-5Cs"/>
+                        <outlet property="viewShellContainer" destination="R88-7e-P1B" id="gz6-il-o32"/>
+                        <outlet property="viewShellOverlay" destination="C2o-4n-OV7" id="ibS-Qi-8fP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="Hwt-7B-DAx">
+                    <connections>
+                        <action selector="dismissShell:" destination="2" id="MUP-lU-SnK"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-38" y="35"/>
         </scene>
@@ -47,9 +126,13 @@
         <class className="CNViewController" superclassName="UIViewController">
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CNViewController.h"/>
             <relationships>
+                <relationship kind="action" name="dismissShell:"/>
                 <relationship kind="outlet" name="imageBg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="lblShellOutput" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tableShowcase" candidateClass="UITableView"/>
-                <relationship kind="outlet" name="test" candidateClass="UILabel"/>
+                <relationship kind="outlet" name="txtShellInput" candidateClass="UITextField"/>
+                <relationship kind="outlet" name="viewShellContainer" candidateClass="UIView"/>
+                <relationship kind="outlet" name="viewShellOverlay" candidateClass="UIView"/>
             </relationships>
         </class>
         <class className="NSLayoutConstraint" superclassName="NSObject">

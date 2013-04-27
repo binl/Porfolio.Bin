@@ -24,14 +24,19 @@ static NSString *kImageKey = @"image";
 
 @implementation CNShowProjCell
 
-@synthesize scrollShowCase, labelTitle, bgView;
-@synthesize viewControllers, contentList;
+@synthesize scrollShowCase, labelTitle, bgView, btnAppStore;
+@synthesize viewControllers, contentList, _app_url;
 
 - (void)initCellWithProject:(NSString *)projName{
-    NSString *path = [[NSBundle mainBundle] pathForResource:projName ofType:@"plist"];
-    self.contentList = [NSArray arrayWithContentsOfFile:path];
+    [btnAppStore setBackgroundImage:[UIImage imageNamed:@"test_cover.jpg"]
+                           forState:UIControlStateHighlighted];
     
-    self.labelTitle.text = @"Later Note";
+    NSString *path = [[NSBundle mainBundle] pathForResource:projName ofType:@"plist"];
+    NSDictionary *projectInfo = [NSDictionary dictionaryWithContentsOfFile:path];
+    self.contentList = [projectInfo objectForKey:@"content"];
+    
+    self.labelTitle.text = [projectInfo objectForKey:@"title"];
+    self._app_url = [projectInfo objectForKey:@"app_url"];
     
     // Background setup
     if (self.bgView == NULL) {
@@ -74,7 +79,7 @@ static NSString *kImageKey = @"image";
 
 - (void)loadScrollViewWithPage:(NSUInteger)page
 {
-    if (page >= 5)
+    if (page >= self.contentList.count)
         return;
     
     // replace the placeholder if necessary
@@ -119,6 +124,11 @@ static NSString *kImageKey = @"image";
     [self loadScrollViewWithPage:page + 2];
     
     // a possible optimization would be to unload the views+controllers which are no longer visible
+}
+
+#pragma mark - IBActions
+- (IBAction)openInAppStore:(id)sender{
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self._app_url]];
 }
 
 @end

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Home Folder</string>
+	<key>dirInfo</key>
+	<dict>
+		<key>later_note</key>
+		<string>later_note</string>
+		<key>.contact_me</key>
+		<string>contact_me</string>
+	</dict>
+	<key>content</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>Welcome to TinyFS, please use the Shell to browse my projects</string>
+			<key>image</key>
+			<string>test_cover.jpg</string>
+		</dict>
+	</array>
+</dict>
+</plist>
