@@ -18,6 +18,21 @@
 		CA3C96FD1729C45800E9FAC1 /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3C96FC1729C45800E9FAC1 /* Default-568h@2x.png */; };
 		CA3C97001729C45800E9FAC1 /* MainStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CA3C96FE1729C45800E9FAC1 /* MainStoryboard.storyboard */; };
 		CA3C97031729C45800E9FAC1 /* CNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C97021729C45800E9FAC1 /* CNViewController.m */; };
+		CA3C970C1729C59C00E9FAC1 /* portrait_bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA3C970B1729C59C00E9FAC1 /* portrait_bg.jpg */; };
+		CA3C9711172A001800E9FAC1 /* CNShowCoverCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C970F172A001800E9FAC1 /* CNShowCoverCell.m */; };
+		CA3C9712172A001800E9FAC1 /* CNShowCoverCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9710172A001800E9FAC1 /* CNShowCoverCell.xib */; };
+		CA3C9715172A051E00E9FAC1 /* CNtableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C9714172A051E00E9FAC1 /* CNtableViewController.m */; };
+		CA3C9750172A0F3B00E9FAC1 /* CNShowProjCell.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C974E172A0F3B00E9FAC1 /* CNShowProjCell.m */; };
+		CA3C9751172A0F3B00E9FAC1 /* CNShowProjCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3C974F172A0F3B00E9FAC1 /* CNShowProjCell.xib */; };
+		CA3C9754172A164000E9FAC1 /* test_cover.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9753172A164000E9FAC1 /* test_cover.jpg */; };
+		CA3C9756172A17A600E9FAC1 /* sc_bg_image.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9755172A17A600E9FAC1 /* sc_bg_image.jpg */; };
+		CA3C975E172A376700E9FAC1 /* UIImage+StackBlur.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C975D172A376700E9FAC1 /* UIImage+StackBlur.m */; };
+		CA3C9768172B26E900E9FAC1 /* CNProjContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CA3C9766172B26E800E9FAC1 /* CNProjContentViewController.m */; };
+		CA3C9769172B26E900E9FAC1 /* CNProjContentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9767172B26E800E9FAC1 /* CNProjContentViewController.xib */; };
+		CA3C976B172B37E500E9FAC1 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3C976A172B37E500E9FAC1 /* QuartzCore.framework */; };
+		CA3C976E172B5BD500E9FAC1 /* later_note.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA3C976D172B5BD500E9FAC1 /* later_note.plist */; };
+		CA3C9772172B5EB800E9FAC1 /* angry_girlfriend.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9770172B5EB800E9FAC1 /* angry_girlfriend.jpg */; };
+		CA3C9773172B5EB800E9FAC1 /* classic_alarm.png in Resources */ = {isa = PBXBuildFile; fileRef = CA3C9771172B5EB800E9FAC1 /* classic_alarm.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +52,26 @@
 		CA3C96FF1729C45800E9FAC1 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = en; path = en.lproj/MainStoryboard.storyboard; sourceTree = "<group>"; };
 		CA3C97011729C45800E9FAC1 /* CNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CNViewController.h; sourceTree = "<group>"; };
 		CA3C97021729C45800E9FAC1 /* CNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CNViewController.m; sourceTree = "<group>"; };
+		CA3C970B1729C59C00E9FAC1 /* portrait_bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = portrait_bg.jpg; sourceTree = "<group>"; };
+		CA3C970E172A001800E9FAC1 /* CNShowCoverCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNShowCoverCell.h; sourceTree = "<group>"; };
+		CA3C970F172A001800E9FAC1 /* CNShowCoverCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNShowCoverCell.m; sourceTree = "<group>"; };
+		CA3C9710172A001800E9FAC1 /* CNShowCoverCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CNShowCoverCell.xib; sourceTree = "<group>"; };
+		CA3C9713172A051E00E9FAC1 /* CNtableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNtableViewController.h; sourceTree = "<group>"; };
+		CA3C9714172A051E00E9FAC1 /* CNtableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNtableViewController.m; sourceTree = "<group>"; };
+		CA3C974D172A0F3B00E9FAC1 /* CNShowProjCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNShowProjCell.h; sourceTree = "<group>"; };
+		CA3C974E172A0F3B00E9FAC1 /* CNShowProjCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNShowProjCell.m; sourceTree = "<group>"; };
+		CA3C974F172A0F3B00E9FAC1 /* CNShowProjCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CNShowProjCell.xib; sourceTree = "<group>"; };
+		CA3C9753172A164000E9FAC1 /* test_cover.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test_cover.jpg; sourceTree = "<group>"; };
+		CA3C9755172A17A600E9FAC1 /* sc_bg_image.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sc_bg_image.jpg; sourceTree = "<group>"; };
+		CA3C975C172A376700E9FAC1 /* UIImage+StackBlur.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+StackBlur.h"; sourceTree = "<group>"; };
+		CA3C975D172A376700E9FAC1 /* UIImage+StackBlur.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+StackBlur.m"; sourceTree = "<group>"; };
+		CA3C9765172B26E800E9FAC1 /* CNProjContentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CNProjContentViewController.h; sourceTree = "<group>"; };
+		CA3C9766172B26E800E9FAC1 /* CNProjContentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CNProjContentViewController.m; sourceTree = "<group>"; };
+		CA3C9767172B26E800E9FAC1 /* CNProjContentViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CNProjContentViewController.xib; sourceTree = "<group>"; };
+		CA3C976A172B37E500E9FAC1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		CA3C976D172B5BD500E9FAC1 /* later_note.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = later_note.plist; sourceTree = "<group>"; };
+		CA3C9770172B5EB800E9FAC1 /* angry_girlfriend.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = angry_girlfriend.jpg; sourceTree = "<group>"; };
+		CA3C9771172B5EB800E9FAC1 /* classic_alarm.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = classic_alarm.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA3C976B172B37E500E9FAC1 /* QuartzCore.framework in Frameworks */,
 				CA3C96E71729C45700E9FAC1 /* UIKit.framework in Frameworks */,
 				CA3C96E91729C45700E9FAC1 /* Foundation.framework in Frameworks */,
 				CA3C96EB1729C45700E9FAC1 /* CoreGraphics.framework in Frameworks */,
@@ -73,6 +109,7 @@
 		CA3C96E51729C45700E9FAC1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				CA3C976A172B37E500E9FAC1 /* QuartzCore.framework */,
 				CA3C96E61729C45700E9FAC1 /* UIKit.framework */,
 				CA3C96E81729C45700E9FAC1 /* Foundation.framework */,
 				CA3C96EA1729C45700E9FAC1 /* CoreGraphics.framework */,
@@ -83,12 +120,17 @@
 		CA3C96EC1729C45700E9FAC1 /* portfolio.bin */ = {
 			isa = PBXGroup;
 			children = (
+				CA3C9759172A373A00E9FAC1 /* openSourceLibs */,
+				CA3C970D1729FFD500E9FAC1 /* showcaseTableCells */,
 				CA3C96F51729C45800E9FAC1 /* CNAppDelegate.h */,
 				CA3C96F61729C45800E9FAC1 /* CNAppDelegate.m */,
 				CA3C96FE1729C45800E9FAC1 /* MainStoryboard.storyboard */,
 				CA3C97011729C45800E9FAC1 /* CNViewController.h */,
 				CA3C97021729C45800E9FAC1 /* CNViewController.m */,
+				CA3C97091729C54E00E9FAC1 /* Resources */,
 				CA3C96ED1729C45700E9FAC1 /* Supporting Files */,
+				CA3C9713172A051E00E9FAC1 /* CNtableViewController.h */,
+				CA3C9714172A051E00E9FAC1 /* CNtableViewController.m */,
 			);
 			path = portfolio.bin;
 			sourceTree = "<group>";
@@ -105,6 +147,85 @@
 				CA3C96FC1729C45800E9FAC1 /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		CA3C97091729C54E00E9FAC1 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C976C172B5BA900E9FAC1 /* Projects */,
+				CA3C970A1729C59C00E9FAC1 /* Images */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		CA3C970A1729C59C00E9FAC1 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C9758172A1AB800E9FAC1 /* project_covers */,
+				CA3C9757172A1AAB00E9FAC1 /* backgrounds */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		CA3C970D1729FFD500E9FAC1 /* showcaseTableCells */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C970E172A001800E9FAC1 /* CNShowCoverCell.h */,
+				CA3C970F172A001800E9FAC1 /* CNShowCoverCell.m */,
+				CA3C9710172A001800E9FAC1 /* CNShowCoverCell.xib */,
+				CA3C974D172A0F3B00E9FAC1 /* CNShowProjCell.h */,
+				CA3C974E172A0F3B00E9FAC1 /* CNShowProjCell.m */,
+				CA3C974F172A0F3B00E9FAC1 /* CNShowProjCell.xib */,
+				CA3C9765172B26E800E9FAC1 /* CNProjContentViewController.h */,
+				CA3C9766172B26E800E9FAC1 /* CNProjContentViewController.m */,
+				CA3C9767172B26E800E9FAC1 /* CNProjContentViewController.xib */,
+			);
+			path = showcaseTableCells;
+			sourceTree = "<group>";
+		};
+		CA3C9757172A1AAB00E9FAC1 /* backgrounds */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C9755172A17A600E9FAC1 /* sc_bg_image.jpg */,
+				CA3C970B1729C59C00E9FAC1 /* portrait_bg.jpg */,
+			);
+			name = backgrounds;
+			sourceTree = "<group>";
+		};
+		CA3C9758172A1AB800E9FAC1 /* project_covers */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C9753172A164000E9FAC1 /* test_cover.jpg */,
+			);
+			name = project_covers;
+			sourceTree = "<group>";
+		};
+		CA3C9759172A373A00E9FAC1 /* openSourceLibs */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C975C172A376700E9FAC1 /* UIImage+StackBlur.h */,
+				CA3C975D172A376700E9FAC1 /* UIImage+StackBlur.m */,
+			);
+			name = openSourceLibs;
+			path = OpenSourceLibs;
+			sourceTree = "<group>";
+		};
+		CA3C976C172B5BA900E9FAC1 /* Projects */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C976F172B5D1200E9FAC1 /* later_note_img */,
+				CA3C976D172B5BD500E9FAC1 /* later_note.plist */,
+			);
+			path = Projects;
+			sourceTree = "<group>";
+		};
+		CA3C976F172B5D1200E9FAC1 /* later_note_img */ = {
+			isa = PBXGroup;
+			children = (
+				CA3C9770172B5EB800E9FAC1 /* angry_girlfriend.jpg */,
+				CA3C9771172B5EB800E9FAC1 /* classic_alarm.png */,
+			);
+			path = later_note_img;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +285,15 @@
 				CA3C96FB1729C45800E9FAC1 /* Default@2x.png in Resources */,
 				CA3C96FD1729C45800E9FAC1 /* Default-568h@2x.png in Resources */,
 				CA3C97001729C45800E9FAC1 /* MainStoryboard.storyboard in Resources */,
+				CA3C970C1729C59C00E9FAC1 /* portrait_bg.jpg in Resources */,
+				CA3C9712172A001800E9FAC1 /* CNShowCoverCell.xib in Resources */,
+				CA3C9751172A0F3B00E9FAC1 /* CNShowProjCell.xib in Resources */,
+				CA3C9754172A164000E9FAC1 /* test_cover.jpg in Resources */,
+				CA3C9756172A17A600E9FAC1 /* sc_bg_image.jpg in Resources */,
+				CA3C9769172B26E900E9FAC1 /* CNProjContentViewController.xib in Resources */,
+				CA3C976E172B5BD500E9FAC1 /* later_note.plist in Resources */,
+				CA3C9772172B5EB800E9FAC1 /* angry_girlfriend.jpg in Resources */,
+				CA3C9773172B5EB800E9FAC1 /* classic_alarm.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +307,11 @@
 				CA3C96F31729C45800E9FAC1 /* main.m in Sources */,
 				CA3C96F71729C45800E9FAC1 /* CNAppDelegate.m in Sources */,
 				CA3C97031729C45800E9FAC1 /* CNViewController.m in Sources */,
+				CA3C9711172A001800E9FAC1 /* CNShowCoverCell.m in Sources */,
+				CA3C9715172A051E00E9FAC1 /* CNtableViewController.m in Sources */,
+				CA3C9750172A0F3B00E9FAC1 /* CNShowProjCell.m in Sources */,
+				CA3C975E172A376700E9FAC1 /* UIImage+StackBlur.m in Sources */,
+				CA3C9768172B26E900E9FAC1 /* CNProjContentViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +434,7 @@
 				CA3C97081729C45800E9FAC1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

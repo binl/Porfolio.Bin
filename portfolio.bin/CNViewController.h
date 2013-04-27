@@ -9,5 +9,9 @@
 #import <UIKit/UIKit.h>
 
 @interface CNViewController : UIViewController
+<UITableViewDataSource, UITableViewDelegate>
+
+@property (strong, nonatomic) IBOutlet UITableView *tableShowcase;
+@property (strong, nonatomic) IBOutlet UIImageView *imageBg;
 
 @end

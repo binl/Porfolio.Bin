@@ -1,23 +1,61 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="2519" systemVersion="12A206j" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="2.0" toolsVersion="3084" systemVersion="11G63" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="2">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="1856"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="2083"/>
     </dependencies>
     <scenes>
-        <!--class Prefix:identifier View Controller-->
+        <!--View Controller-->
         <scene sceneID="5">
             <objects>
                 <viewController id="2" customClass="CNViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="3">
-                        <rect key="frame" x="0.0" y="20" width="320" height="460"/>
+                        <rect key="frame" x="0.0" y="20" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="6DX-DD-VOj"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="CRr-Id-Wgf">
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="2" id="hYU-9N-62e"/>
+                                    <outlet property="delegate" destination="2" id="9EH-Gr-6yh"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="CRr-Id-Wgf" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="0Xb-Xx-jn2"/>
+                            <constraint firstItem="CRr-Id-Wgf" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="1rU-IL-B4f"/>
+                            <constraint firstItem="6DX-DD-VOj" firstAttribute="leading" secondItem="3" secondAttribute="leading" type="default" id="4kF-cx-XoC"/>
+                            <constraint firstItem="6DX-DD-VOj" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="Cen-0R-ZIx"/>
+                            <constraint firstItem="6DX-DD-VOj" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" type="default" id="I7Z-kU-yYZ"/>
+                            <constraint firstItem="6DX-DD-VOj" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Wze-lz-LkB"/>
+                            <constraint firstItem="CRr-Id-Wgf" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="mQB-He-DTR"/>
+                            <constraint firstItem="CRr-Id-Wgf" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="x5d-3J-5Rf"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="imageBg" destination="6DX-DD-VOj" id="J8b-zc-7eq"/>
+                        <outlet property="tableShowcase" destination="CRr-Id-Wgf" id="sk1-5H-1ip"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-38" y="35"/>
         </scene>
     </scenes>
+    <classes>
+        <class className="CNViewController" superclassName="UIViewController">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/CNViewController.h"/>
+            <relationships>
+                <relationship kind="outlet" name="imageBg" candidateClass="UIImageView"/>
+                <relationship kind="outlet" name="tableShowcase" candidateClass="UITableView"/>
+                <relationship kind="outlet" name="test" candidateClass="UILabel"/>
+            </relationships>
+        </class>
+        <class className="NSLayoutConstraint" superclassName="NSObject">
+            <source key="sourceIdentifier" type="project" relativePath="./Classes/NSLayoutConstraint.h"/>
+        </class>
+    </classes>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>
