@@ -3,30 +3,26 @@
 <plist version="1.0">
 <dict>
 	<key>title</key>
-	<string>Internships</string>
+	<string>Side Projects</string>
 	<key>parentDir</key>
 	<string>coverpage</string>
 	<key>dirInfo</key>
 	<dict/>
+	<key>app_url</key>
+	<string></string>
 	<key>content</key>
 	<array>
 		<dict>
 			<key>description</key>
-			<string>Intern at Facebook for the coming summer</string>
+			<string>Built my own kernel! Support most of the system calls!</string>
 			<key>image</key>
-			<string>facebook.jpg</string>
+			<string>kernel.jpg</string>
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>TAed for 15-213</string>
+			<string>An e-bay like website for mobile devices</string>
 			<key>image</key>
-			<string>cmuTA.jpg</string>
-		</dict>
-		<dict>
-			<key>description</key>
-			<string>Interned at SAP, built the iOS version of one of the BI suites</string>
-			<key>image</key>
-			<string>sap.jpg</string>
+			<string>mobidr.png</string>
 		</dict>
 	</array>
 </dict>

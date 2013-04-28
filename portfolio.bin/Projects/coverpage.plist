@@ -8,6 +8,8 @@
 	<dict>
 		<key>dev_projects</key>
 		<string>dev_projects</string>
+		<key>side-projects</key>
+		<string>side-projects</string>
 		<key>university</key>
 		<string>university</string>
 		<key>.contact_me</key>
@@ -17,7 +19,7 @@
 	<array>
 		<dict>
 			<key>description</key>
-			<string>Checkout my iOS development projects!</string>
+			<string>iOS Projects</string>
 			<key>image</key>
 			<string>dev_projects.png</string>
 			<key>sub_dir</key>
@@ -38,6 +40,14 @@
 			<string>education.jpg</string>
 			<key>sub_dir</key>
 			<string>university</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>Some side projects~~</string>
+			<key>image</key>
+			<string>side-projects.jpg</string>
+			<key>sub_dir</key>
+			<string>side-projects</string>
 		</dict>
 	</array>
 </dict>
