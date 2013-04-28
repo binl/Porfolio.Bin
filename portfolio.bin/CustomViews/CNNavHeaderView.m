@@ -18,8 +18,8 @@
         
         UIView *bgView = [[UIView alloc] initWithFrame:frame];
         
-        [bgView setBackgroundColor:[UIColor darkTextColor]];
-        [bgView setAlpha:0.5];
+        [bgView setBackgroundColor:[UIColor colorWithRed:0 green:0 blue:0 alpha:0.5]];
+        [bgView setAlpha:1];
         
         UILabel *titleLabel = [[UILabel alloc] initWithFrame:frame];
         [titleLabel setFont:[UIFont fontWithName:@"HelveticaNeue-UltraLight" size:26]];

@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "portfolio.bin/showcaseTableCells/CNShowProjCell.m"
-         timestampString = "388743185.568835"
+         timestampString = "388813605.489477"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "87"
-         endingLineNumber = "87"
+         startingLineNumber = "97"
+         endingLineNumber = "97"
          landmarkName = "-loadScrollViewWithPage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "portfolio.bin/showcaseTableCells/CNShowProjCell.m"
-         timestampString = "388743185.568835"
+         timestampString = "388813605.489477"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "104"
-         endingLineNumber = "104"
+         startingLineNumber = "114"
+         endingLineNumber = "114"
          landmarkName = "-loadScrollViewWithPage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "portfolio.bin/showcaseTableCells/CNShowProjCell.m"
-         timestampString = "388743185.568835"
+         timestampString = "388813605.489477"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "132"
-         endingLineNumber = "132"
+         startingLineNumber = "142"
+         endingLineNumber = "142"
          landmarkName = "-openInAppStore:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "portfolio.bin/CNViewController.m"
-         timestampString = "388743426.647309"
+         timestampString = "388814869.248303"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "254"
-         endingLineNumber = "254"
+         startingLineNumber = "271"
+         endingLineNumber = "271"
          landmarkName = "-parseline:"
          landmarkType = "5">
       </FileBreakpoint>

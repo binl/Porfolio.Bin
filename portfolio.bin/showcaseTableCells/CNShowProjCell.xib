@@ -120,6 +120,7 @@
 								<string key="NSFrame">{{0, 25}, {320, 39}}</string>
 								<reference key="NSSuperview" ref="1040264144"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<bool key="IBUIOpaque">NO</bool>
 								<bool key="IBUIClipsSubviews">YES</bool>
@@ -556,16 +557,6 @@
 						<reference key="parent" ref="419232633"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">115</int>
-						<reference key="object" ref="984355787"/>
-						<reference key="parent" ref="419232633"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">129</int>
-						<reference key="object" ref="719509196"/>
-						<reference key="parent" ref="419232633"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">135</int>
 						<reference key="object" ref="1021971321"/>
 						<reference key="parent" ref="1040981983"/>
@@ -574,16 +565,6 @@
 						<int key="objectID">143</int>
 						<reference key="object" ref="181854159"/>
 						<reference key="parent" ref="282973704"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">145</int>
-						<reference key="object" ref="814951080"/>
-						<reference key="parent" ref="419232633"/>
-					</object>
-					<object class="IBObjectRecord">
-						<int key="objectID">146</int>
-						<reference key="object" ref="549730223"/>
-						<reference key="parent" ref="419232633"/>
 					</object>
 					<object class="IBObjectRecord">
 						<int key="objectID">148</int>
@@ -599,6 +580,26 @@
 						<int key="objectID">154</int>
 						<reference key="object" ref="12806441"/>
 						<reference key="parent" ref="282973704"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">129</int>
+						<reference key="object" ref="719509196"/>
+						<reference key="parent" ref="419232633"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">115</int>
+						<reference key="object" ref="984355787"/>
+						<reference key="parent" ref="419232633"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">146</int>
+						<reference key="object" ref="549730223"/>
+						<reference key="parent" ref="419232633"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">145</int>
+						<reference key="object" ref="814951080"/>
+						<reference key="parent" ref="419232633"/>
 					</object>
 				</array>
 			</object>
@@ -663,7 +664,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">156</int>
+			<int key="maxID">161</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -721,14 +722,20 @@
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
 						<string key="imageBg">UIImageView</string>
+						<string key="lblShellOutput">UILabel</string>
 						<string key="tableShowcase">UITableView</string>
 						<string key="txtShellInput">UITextField</string>
 						<string key="viewShellContainer">UIView</string>
+						<string key="viewShellOverlay">UIView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
 						<object class="IBToOneOutletInfo" key="imageBg">
 							<string key="name">imageBg</string>
 							<string key="candidateClassName">UIImageView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="lblShellOutput">
+							<string key="name">lblShellOutput</string>
+							<string key="candidateClassName">UILabel</string>
 						</object>
 						<object class="IBToOneOutletInfo" key="tableShowcase">
 							<string key="name">tableShowcase</string>
@@ -740,6 +747,10 @@
 						</object>
 						<object class="IBToOneOutletInfo" key="viewShellContainer">
 							<string key="name">viewShellContainer</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
+						<object class="IBToOneOutletInfo" key="viewShellOverlay">
+							<string key="name">viewShellOverlay</string>
 							<string key="candidateClassName">UIView</string>
 						</object>
 					</dictionary>

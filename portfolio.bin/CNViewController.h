@@ -24,4 +24,6 @@
 
 -(IBAction)dismissShell:(id)sender;
 
+-(void)stepIntoFolderNum:(NSUInteger)page;
+-(void)stepOutOfFolder;
 @end

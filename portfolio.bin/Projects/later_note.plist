@@ -5,19 +5,13 @@
 	<key>title</key>
 	<string>Later Note</string>
 	<key>parentDir</key>
-	<string>coverpage</string>
+	<string>dev_projects</string>
 	<key>dirInfo</key>
 	<dict/>
 	<key>app_url</key>
 	<string>https://itunes.apple.com/us/app/later-note-best-reminder-todo/id492250404?mt=8</string>
 	<key>content</key>
 	<array>
-		<dict>
-			<key>description</key>
-			<string>Later Note, for lazy dudes like me XD</string>
-			<key>image</key>
-			<string>cover.png</string>
-		</dict>
 		<dict>
 			<key>description</key>
 			<string>Started just to address my personal urgent needs</string>
@@ -41,6 +35,12 @@
 			<string>Then I added built-in achievements to reward myself</string>
 			<key>image</key>
 			<string>achievements.png</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>Later Note, for lazy dudes like me XD</string>
+			<key>image</key>
+			<string>cover.png</string>
 		</dict>
 	</array>
 </dict>

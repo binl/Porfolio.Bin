@@ -39,6 +39,9 @@ static const CGFloat kRevealDeltaY = -180.0f;
     
     CNExtHeaderVIew *_extHdr;
 }
+
+-(void)updateContentWillStepIn:(BOOL)isStepIn;
+
 @end
 
 @implementation CNViewController
@@ -88,11 +91,24 @@ static const CGFloat kRevealDeltaY = -180.0f;
     CNNavHeaderView *hdrView = [[CNNavHeaderView alloc] initWithFrame:
                        CGRectMake(0, 0, SECTION_HDR_WIDTH, SECTION_HDR_HEIGHT)];
     
-    UIButton *btnShell = [UIButton buttonWithType:UIButtonTypeInfoLight];
+    UIButton *btnShell = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnShell setTitle:@">_ " forState:UIControlStateNormal];
+    [btnShell.titleLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:20]];
+    [btnShell setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [btnShell setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
     [btnShell addTarget:self action:@selector(displayShell) forControlEvents:UIControlEventTouchUpInside];
-    btnShell.frame = CGRectMake(280, 0, 40, 40);
+    btnShell.frame = CGRectMake(270, 0, 40, 40);
     
     [hdrView addSubview:btnShell];
+    
+    UIButton *btnBack = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btnBack setImage:[UIImage imageNamed:@"arrow_black"] forState:UIControlStateHighlighted];
+    [btnBack setImage:[UIImage imageNamed:@"arrow_white"] forState:UIControlStateNormal];
+    [btnBack addTarget:self action:@selector(stepOutOfFolder) forControlEvents:UIControlEventTouchUpInside];
+    btnBack.frame = CGRectMake(5, 5, 30, 30);
+    
+    [hdrView addSubview:btnBack];
+    
     return hdrView;
 }
 
@@ -131,6 +147,7 @@ static const CGFloat kRevealDeltaY = -180.0f;
     }
     else {
         [(CNShowProjCell *)cell initCellWithProject:_currentShow];
+        [(CNShowProjCell *)cell setMainView:self];
     }
     
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
@@ -238,7 +255,7 @@ static const CGFloat kRevealDeltaY = -180.0f;
                 return;
             }
             _currentShow = parentDir;
-            [self updateContent];
+            [self updateContentWillStepIn:NO];
         }
         else {
             NSDictionary *childDirs = [currentFolderInfo objectForKey:@"dirInfo"];
@@ -248,7 +265,7 @@ static const CGFloat kRevealDeltaY = -180.0f;
                 return;
             }
             _currentShow = childDir;
-            [self updateContent];
+            [self updateContentWillStepIn:YES];
         }
     }
     else if ([command isEqualToString:@"ls"]) {
@@ -285,12 +302,45 @@ static const CGFloat kRevealDeltaY = -180.0f;
     return;
 }
 
--(void)updateContent{
-    [self.tableShowcase reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:1 inSection:0]] withRowAnimation:UITableViewRowAnimationLeft];
+-(void)updateContentWillStepIn:(BOOL)isStepIn{
+    UITableViewRowAnimation thisAnimation = UITableViewRowAnimationLeft;
+    if (!isStepIn) {
+        thisAnimation = UITableViewRowAnimationRight;
+    }
+    
+    [self.tableShowcase reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:1 inSection:0]] withRowAnimation:thisAnimation];
     
     [self.txtShellInput resignFirstResponder];
-    
     [self.viewShellOverlay setHidden:YES];
+}
+
+#pragma mark - Folder operation actions
+-(void)stepIntoFolderNum:(NSUInteger)page{
+    NSString *path = [[NSBundle mainBundle] pathForResource:_currentShow ofType:@"plist"];
+    NSDictionary *currentFolderInfo = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    NSArray *childDirs = [currentFolderInfo objectForKey:@"content"];
+
+    NSString *childDir = [[childDirs objectAtIndex:page] objectForKey:@"sub_dir"];
+    if (childDir == NULL) {
+        return;
+    }
+    _currentShow = childDir;
+    [self.tableShowcase setContentOffset:CGPointMake(0, 440) animated:YES];
+    [self updateContentWillStepIn:YES];
+}
+
+-(void)stepOutOfFolder{
+    NSString *path = [[NSBundle mainBundle] pathForResource:_currentShow ofType:@"plist"];
+    NSDictionary *currentFolderInfo = [NSDictionary dictionaryWithContentsOfFile:path];
+    
+    NSString *parentDir = [currentFolderInfo objectForKey:@"parentDir"];
+    if (parentDir == NULL) {
+        return;
+    }
+    _currentShow = parentDir;
+    [self.tableShowcase setContentOffset:CGPointMake(0, 440) animated:YES];
+    [self updateContentWillStepIn:NO];
 }
 
 @end

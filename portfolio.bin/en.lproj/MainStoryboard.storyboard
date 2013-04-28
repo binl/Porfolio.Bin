@@ -24,7 +24,7 @@
                                 <subviews>
                                     <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" preferredMaxLayoutWidth="280" translatesAutoresizingMaskIntoConstraints="NO" id="AGs-x9-wKX">
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="165" id="e0J-Rh-5zt"/>
+                                            <constraint firstAttribute="height" constant="187" id="ESB-Qp-f6f"/>
                                         </constraints>
                                         <string key="text">How to use shell in TinyFS?
 - In short, like any other shell!
@@ -37,11 +37,15 @@
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstItem="AGs-x9-wKX" firstAttribute="leading" secondItem="C2o-4n-OV7" secondAttribute="leading" constant="20" symbolic="YES" type="default" id="P7L-Hg-ilg"/>
+                                    <constraint firstItem="AGs-x9-wKX" firstAttribute="top" secondItem="C2o-4n-OV7" secondAttribute="top" constant="45" id="VVJ-oq-C7h"/>
                                     <constraint firstAttribute="trailing" secondItem="AGs-x9-wKX" secondAttribute="trailing" constant="20" symbolic="YES" type="default" id="g9e-5m-EF7"/>
-                                    <constraint firstItem="AGs-x9-wKX" firstAttribute="top" secondItem="C2o-4n-OV7" secondAttribute="top" constant="67" id="svB-Uh-z16"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="cHa-nw-fJP" appends="YES" id="0Zh-Jz-jmk"/>
+                                </connections>
                             </view>
                             <view contentMode="scaleToFill" restorationIdentifier="shell" translatesAutoresizingMaskIntoConstraints="NO" id="R88-7e-P1B" userLabel="ShellContainer" colorLabel="IBBuiltInLabel-Red">
                                 <subviews>
@@ -118,6 +122,11 @@
                         <action selector="dismissShell:" destination="2" id="MUP-lU-SnK"/>
                     </connections>
                 </swipeGestureRecognizer>
+                <swipeGestureRecognizer direction="down" id="cHa-nw-fJP">
+                    <connections>
+                        <action selector="dismissShell:" destination="2" id="2g6-40-PAH"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-38" y="35"/>
         </scene>
@@ -127,6 +136,7 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CNViewController.h"/>
             <relationships>
                 <relationship kind="action" name="dismissShell:"/>
+                <relationship kind="action" name="stepIntoFolder:"/>
                 <relationship kind="outlet" name="imageBg" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="lblShellOutput" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tableShowcase" candidateClass="UITableView"/>

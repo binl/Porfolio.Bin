@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>iOS Projects</string>
+	<key>parentDir</key>
+	<string>coverpage</string>
+	<key>dirInfo</key>
+	<dict>
+		<key>imoffice</key>
+		<string>imoffice</string>
+		<key>later_note</key>
+		<string>later_note</string>
+		<key>sfu</key>
+		<string>sfu</string>
+	</dict>
+	<key>content</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>A super light-weight reminder App for lazy dudes like me XD</string>
+			<key>image</key>
+			<string>later_note.png</string>
+			<key>sub_dir</key>
+			<string>later_note</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>A Fully functional IM system, 50k lines of code, done by a team of 2</string>
+			<key>image</key>
+			<string>imoffice.png</string>
+			<key>sub_dir</key>
+			<string>imoffice</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>My very first iOS App, built for my S/W Eng Course</string>
+			<key>image</key>
+			<string>sfu.jpg</string>
+			<key>sub_dir</key>
+			<string>sfu</string>
+		</dict>
+	</array>
+</dict>
+</plist>

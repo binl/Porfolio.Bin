@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CNViewController.h"
 
 @interface CNShowProjCell : UITableViewCell
 <UIScrollViewDelegate>
+
+@property (strong, nonatomic) CNViewController *mainView;
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollShowCase;
 @property (strong, nonatomic) IBOutlet UILabel *labelTitle;

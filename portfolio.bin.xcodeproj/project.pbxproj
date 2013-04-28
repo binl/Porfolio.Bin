@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CA089605172CC62700A15890 /* dev_projects.png in Resources */ = {isa = PBXBuildFile; fileRef = CA089603172CC62700A15890 /* dev_projects.png */; };
+		CA089608172CC73D00A15890 /* education.png in Resources */ = {isa = PBXBuildFile; fileRef = CA089607172CC73D00A15890 /* education.png */; };
+		CA089610172CC89D00A15890 /* sfu.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA08960C172CC89D00A15890 /* sfu.jpg */; };
+		CA089611172CC89D00A15890 /* dev_projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA08960D172CC89D00A15890 /* dev_projects.plist */; };
+		CA089614172CCA3500A15890 /* imoffice.png in Resources */ = {isa = PBXBuildFile; fileRef = CA089612172CCA3400A15890 /* imoffice.png */; };
+		CA089615172CCA3500A15890 /* later_note.png in Resources */ = {isa = PBXBuildFile; fileRef = CA089613172CCA3500A15890 /* later_note.png */; };
+		CA089618172CD6A900A15890 /* arrow_black.png in Resources */ = {isa = PBXBuildFile; fileRef = CA089616172CD6A900A15890 /* arrow_black.png */; };
+		CA089619172CD6A900A15890 /* arrow_white.png in Resources */ = {isa = PBXBuildFile; fileRef = CA089617172CD6A900A15890 /* arrow_white.png */; };
 		CA3C96E71729C45700E9FAC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3C96E61729C45700E9FAC1 /* UIKit.framework */; };
 		CA3C96E91729C45700E9FAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3C96E81729C45700E9FAC1 /* Foundation.framework */; };
 		CA3C96EB1729C45700E9FAC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3C96EA1729C45700E9FAC1 /* CoreGraphics.framework */; };
@@ -45,6 +53,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CA089603172CC62700A15890 /* dev_projects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dev_projects.png; sourceTree = "<group>"; };
+		CA089607172CC73D00A15890 /* education.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = education.png; sourceTree = "<group>"; };
+		CA08960C172CC89D00A15890 /* sfu.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = sfu.jpg; sourceTree = "<group>"; };
+		CA08960D172CC89D00A15890 /* dev_projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = dev_projects.plist; sourceTree = "<group>"; };
+		CA089612172CCA3400A15890 /* imoffice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = imoffice.png; sourceTree = "<group>"; };
+		CA089613172CCA3500A15890 /* later_note.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = later_note.png; sourceTree = "<group>"; };
+		CA089616172CD6A900A15890 /* arrow_black.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_black.png; sourceTree = "<group>"; };
+		CA089617172CD6A900A15890 /* arrow_white.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = arrow_white.png; sourceTree = "<group>"; };
 		CA3C96E31729C45700E9FAC1 /* portfolio.bin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = portfolio.bin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3C96E61729C45700E9FAC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA3C96E81729C45700E9FAC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -108,6 +124,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CA089602172CC62700A15890 /* coverpage */ = {
+			isa = PBXGroup;
+			children = (
+				CA089607172CC73D00A15890 /* education.png */,
+				CA089603172CC62700A15890 /* dev_projects.png */,
+			);
+			path = coverpage;
+			sourceTree = "<group>";
+		};
+		CA089609172CC89D00A15890 /* dev_projects */ = {
+			isa = PBXGroup;
+			children = (
+				CA089612172CCA3400A15890 /* imoffice.png */,
+				CA089613172CCA3500A15890 /* later_note.png */,
+				CA08960C172CC89D00A15890 /* sfu.jpg */,
+			);
+			path = dev_projects;
+			sourceTree = "<group>";
+		};
 		CA3C96DA1729C45700E9FAC1 = {
 			isa = PBXGroup;
 			children = (
@@ -179,6 +214,8 @@
 		CA3C970A1729C59C00E9FAC1 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				CA089616172CD6A900A15890 /* arrow_black.png */,
+				CA089617172CD6A900A15890 /* arrow_white.png */,
 				CA3C9758172A1AB800E9FAC1 /* project_covers */,
 				CA3C9757172A1AAB00E9FAC1 /* backgrounds */,
 			);
@@ -231,12 +268,15 @@
 		CA3C976C172B5BA900E9FAC1 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				CA089609172CC89D00A15890 /* dev_projects */,
+				CA08960D172CC89D00A15890 /* dev_projects.plist */,
+				CA089602172CC62700A15890 /* coverpage */,
+				CA3C9784172B949D00E9FAC1 /* coverpage.plist */,
 				CA3C978C172BBE4E00E9FAC1 /* contact_me.plist */,
 				CA3C978D172BBE4E00E9FAC1 /* imoffice.plist */,
 				CA3C978E172BBE4E00E9FAC1 /* motlas.plist */,
 				CA3C978F172BBE4E00E9FAC1 /* SFU_mportal.plist */,
 				CA3C976F172B5D1200E9FAC1 /* later_note_img */,
-				CA3C9784172B949D00E9FAC1 /* coverpage.plist */,
 				CA3C9786172B989800E9FAC1 /* later_note.plist */,
 			);
 			path = Projects;
@@ -339,6 +379,14 @@
 				CA3C9791172BBE4E00E9FAC1 /* imoffice.plist in Resources */,
 				CA3C9792172BBE4E00E9FAC1 /* motlas.plist in Resources */,
 				CA3C9793172BBE4E00E9FAC1 /* SFU_mportal.plist in Resources */,
+				CA089605172CC62700A15890 /* dev_projects.png in Resources */,
+				CA089608172CC73D00A15890 /* education.png in Resources */,
+				CA089610172CC89D00A15890 /* sfu.jpg in Resources */,
+				CA089611172CC89D00A15890 /* dev_projects.plist in Resources */,
+				CA089614172CCA3500A15890 /* imoffice.png in Resources */,
+				CA089615172CCA3500A15890 /* later_note.png in Resources */,
+				CA089618172CD6A900A15890 /* arrow_black.png in Resources */,
+				CA089619172CD6A900A15890 /* arrow_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

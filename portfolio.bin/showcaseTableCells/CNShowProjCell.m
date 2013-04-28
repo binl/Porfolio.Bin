@@ -19,13 +19,14 @@ static NSString *kDescKey = @"description";
 static NSString *kImageKey = @"image";
 
 @interface CNShowProjCell ()
-
+- (void)openDirectory;
 @end
 
 @implementation CNShowProjCell
 
 @synthesize scrollShowCase, labelTitle, bgView, btnAppStore;
 @synthesize viewControllers, contentList, _app_url;
+@synthesize mainView;
 
 - (void)initCellWithProject:(NSString *)projName{
     [btnAppStore setBackgroundImage:[UIImage imageNamed:@"test_cover.jpg"]
@@ -70,6 +71,15 @@ static NSString *kImageKey = @"image";
     self.scrollShowCase.scrollsToTop = NO;
     self.scrollShowCase.delegate = self;
     self.scrollShowCase.contentOffset = CGPointMake(0, 0);
+    for (UIView *subview in self.scrollShowCase.subviews) {
+        [subview removeFromSuperview];
+    }
+    
+    UITapGestureRecognizer *doubleTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(openDirectory)];
+    [doubleTap setNumberOfTapsRequired:1];
+    [doubleTap setNumberOfTouchesRequired:1];
+    [self.scrollShowCase addGestureRecognizer:doubleTap];
+    
     
     // load the visible page
     // load the page on either side to avoid flashes when the user starts scrolling
@@ -130,6 +140,11 @@ static NSString *kImageKey = @"image";
 #pragma mark - IBActions
 - (IBAction)openInAppStore:(id)sender{
     [[UIApplication sharedApplication] openURL:[NSURL URLWithString:self._app_url]];
+}
+
+- (void)openDirectory{
+    NSUInteger page = floor((self.scrollShowCase.contentOffset.x - CONTENT_WIDTH / 2) / CONTENT_WIDTH) + 1;
+    [self.mainView stepIntoFolderNum:page];
 }
 
 @end
