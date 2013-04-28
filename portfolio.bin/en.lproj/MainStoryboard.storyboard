@@ -78,6 +78,7 @@
                                     <constraint firstItem="cW4-2f-KFd" firstAttribute="leading" secondItem="R88-7e-P1B" secondAttribute="leading" constant="5" id="XT4-Qf-Y8G"/>
                                     <constraint firstItem="cW4-2f-KFd" firstAttribute="top" secondItem="R88-7e-P1B" secondAttribute="top" constant="9" id="daD-Pd-ZI7"/>
                                     <constraint firstItem="DUK-AI-mQn" firstAttribute="centerY" secondItem="R88-7e-P1B" secondAttribute="centerY" type="default" id="mAq-FP-KdA"/>
+                                    <constraint firstAttribute="height" constant="40" type="user" id="vl5-5f-zMx"/>
                                 </constraints>
                                 <connections>
                                     <outletCollection property="gestureRecognizers" destination="Hwt-7B-DAx" appends="YES" id="59T-cX-9rg"/>
@@ -97,8 +98,8 @@
                             <constraint firstItem="R88-7e-P1B" firstAttribute="trailing" secondItem="3" secondAttribute="trailing" priority="1" type="user" id="W9y-Tk-gkU"/>
                             <constraint firstItem="6DX-DD-VOj" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="Wze-lz-LkB"/>
                             <constraint firstItem="R88-7e-P1B" firstAttribute="leading" secondItem="3" secondAttribute="leading" constant="320" id="bVR-dS-Q8j"/>
-                            <constraint firstItem="R88-7e-P1B" firstAttribute="top" secondItem="3" secondAttribute="top" priority="1" type="user" id="cx8-zS-UX3"/>
-                            <constraint firstAttribute="bottom" secondItem="R88-7e-P1B" secondAttribute="bottom" constant="420" id="etm-zX-yUN"/>
+                            <constraint firstItem="R88-7e-P1B" firstAttribute="top" secondItem="3" secondAttribute="top" type="user" id="cx8-zS-UX3"/>
+                            <constraint firstAttribute="bottom" secondItem="R88-7e-P1B" secondAttribute="bottom" priority="1" constant="420" type="user" id="etm-zX-yUN"/>
                             <constraint firstItem="C2o-4n-OV7" firstAttribute="top" secondItem="3" secondAttribute="top" type="default" id="kl9-Cj-CPP"/>
                             <constraint firstItem="CRr-Id-Wgf" firstAttribute="bottom" secondItem="3" secondAttribute="bottom" type="default" id="mQB-He-DTR"/>
                             <constraint firstAttribute="trailing" secondItem="R88-7e-P1B" secondAttribute="trailing" constant="-320" id="mWa-4F-n2W"/>
@@ -136,7 +137,6 @@
             <source key="sourceIdentifier" type="project" relativePath="./Classes/CNViewController.h"/>
             <relationships>
                 <relationship kind="action" name="dismissShell:"/>
-                <relationship kind="action" name="stepIntoFolder:"/>
                 <relationship kind="outlet" name="imageBg" candidateClass="UIImageView"/>
                 <relationship kind="outlet" name="lblShellOutput" candidateClass="UILabel"/>
                 <relationship kind="outlet" name="tableShowcase" candidateClass="UITableView"/>

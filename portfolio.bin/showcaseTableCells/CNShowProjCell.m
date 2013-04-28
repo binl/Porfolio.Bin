@@ -18,6 +18,8 @@
 static NSString *kDescKey = @"description";
 static NSString *kImageKey = @"image";
 
+static NSInteger kDelta = 0;
+
 @interface CNShowProjCell ()
 - (void)openDirectory;
 @end
@@ -41,7 +43,7 @@ static NSString *kImageKey = @"image";
     
     // Background setup
     if (self.bgView == NULL) {
-        self.bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 5, 290, 400)];
+        self.bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 5, 290, 400 + kDelta)];
         
         [self.bgView setBackgroundColor:[UIColor darkTextColor]];
         [self.bgView setAlpha:0.6];
@@ -110,7 +112,7 @@ static NSString *kImageKey = @"image";
         frame.origin.x = PAGE_PADDING/2 + (CONTENT_WIDTH + PAGE_PADDING) * page;
         frame.origin.y = 0;
         frame.size.width = CONTENT_WIDTH;
-        frame.size.height = 300;
+        frame.size.height = 300 + kDelta;
         controller.view.frame = frame;
         
         [self.scrollShowCase addSubview:controller.view];

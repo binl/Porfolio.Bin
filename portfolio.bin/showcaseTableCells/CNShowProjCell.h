@@ -17,7 +17,7 @@
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollShowCase;
 @property (strong, nonatomic) IBOutlet UILabel *labelTitle;
 @property (strong, nonatomic) IBOutlet UIButton *btnAppStore;
-@property (strong, nonatomic) UIView *bgView;
+@property (strong, nonatomic) IBOutlet UIView *bgView;
 
 @property (strong, nonatomic) NSMutableArray *viewControllers;
 @property (strong, nonatomic) NSArray *contentList;

@@ -106,7 +106,7 @@
 								<string key="NSFrameSize">{320, 420}</string>
 								<reference key="NSSuperview" ref="1040264144"/>
 								<reference key="NSWindow"/>
-								<reference key="NSNextKeyView" ref="81948076"/>
+								<reference key="NSNextKeyView"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor" id="71959044">
 									<int key="NSColorSpace">3</int>
@@ -567,11 +567,6 @@
 						<reference key="parent" ref="282973704"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">148</int>
-						<reference key="object" ref="521906298"/>
-						<reference key="parent" ref="419232633"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">153</int>
 						<reference key="object" ref="27013128"/>
 						<reference key="parent" ref="419232633"/>
@@ -582,11 +577,6 @@
 						<reference key="parent" ref="282973704"/>
 					</object>
 					<object class="IBObjectRecord">
-						<int key="objectID">129</int>
-						<reference key="object" ref="719509196"/>
-						<reference key="parent" ref="419232633"/>
-					</object>
-					<object class="IBObjectRecord">
 						<int key="objectID">115</int>
 						<reference key="object" ref="984355787"/>
 						<reference key="parent" ref="419232633"/>
@@ -594,6 +584,16 @@
 					<object class="IBObjectRecord">
 						<int key="objectID">146</int>
 						<reference key="object" ref="549730223"/>
+						<reference key="parent" ref="419232633"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">129</int>
+						<reference key="object" ref="719509196"/>
+						<reference key="parent" ref="419232633"/>
+					</object>
+					<object class="IBObjectRecord">
+						<int key="objectID">148</int>
+						<reference key="object" ref="521906298"/>
 						<reference key="parent" ref="419232633"/>
 					</object>
 					<object class="IBObjectRecord">
@@ -664,7 +664,7 @@
 			<nil key="activeLocalization"/>
 			<dictionary class="NSMutableDictionary" key="localizations"/>
 			<nil key="sourceID"/>
-			<int key="maxID">161</int>
+			<int key="maxID">188</int>
 		</object>
 		<object class="IBClassDescriber" key="IBDocument.Classes">
 			<array class="NSMutableArray" key="referencedPartialClassDescriptions">
@@ -683,11 +683,16 @@
 						</object>
 					</object>
 					<dictionary class="NSMutableDictionary" key="outlets">
+						<string key="bgView">UIView</string>
 						<string key="btnAppStore">UIButton</string>
 						<string key="labelTitle">UILabel</string>
 						<string key="scrollShowCase">UIScrollView</string>
 					</dictionary>
 					<dictionary class="NSMutableDictionary" key="toOneOutletInfosByName">
+						<object class="IBToOneOutletInfo" key="bgView">
+							<string key="name">bgView</string>
+							<string key="candidateClassName">UIView</string>
+						</object>
 						<object class="IBToOneOutletInfo" key="btnAppStore">
 							<string key="name">btnAppStore</string>
 							<string key="candidateClassName">UIButton</string>

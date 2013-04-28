@@ -28,6 +28,7 @@
 * swipe to right or \"quit\" to leave shell"
 
 static const CGFloat kRevealDeltaY = -180.0f;
+static NSInteger delta = 0;
 
 @interface CNViewController () {
     UIImage *_original_bg;
@@ -65,6 +66,11 @@ static const CGFloat kRevealDeltaY = -180.0f;
     _blurred_bg = [_original_bg stackBlur:12];
     [self.imageBg setImage:_original_bg];
     
+    if (self.view.frame.size.height > 480) {
+        /* iphone 5*/
+        delta = 88;
+    }
+
     _currentShow = @"coverpage";
 }
 
@@ -112,11 +118,11 @@ static const CGFloat kRevealDeltaY = -180.0f;
     return hdrView;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {        
     if (indexPath.row != 0) {
-        return 420;
+        return 420 + delta;
     }
-    return 440;
+    return 440 + delta;
 }
 
 
@@ -210,7 +216,7 @@ static const CGFloat kRevealDeltaY = -180.0f;
 
 #pragma mark - textfield delegates
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
-    [self.tableShowcase setContentOffset:CGPointMake(0, 440) animated:YES];
+    [self.tableShowcase setContentOffset:CGPointMake(0, 440 + delta) animated:YES];
     [self.viewShellOverlay setHidden:NO];
     return YES;
 }
@@ -326,7 +332,7 @@ static const CGFloat kRevealDeltaY = -180.0f;
         return;
     }
     _currentShow = childDir;
-    [self.tableShowcase setContentOffset:CGPointMake(0, 440) animated:YES];
+    [self.tableShowcase setContentOffset:CGPointMake(0, 440 + delta) animated:YES];
     [self updateContentWillStepIn:YES];
 }
 
@@ -339,7 +345,7 @@ static const CGFloat kRevealDeltaY = -180.0f;
         return;
     }
     _currentShow = parentDir;
-    [self.tableShowcase setContentOffset:CGPointMake(0, 440) animated:YES];
+    [self.tableShowcase setContentOffset:CGPointMake(0, 440 + delta) animated:YES];
     [self updateContentWillStepIn:NO];
 }
 
