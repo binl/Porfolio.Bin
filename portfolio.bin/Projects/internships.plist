@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>title</key>
+	<string>Internships</string>
+	<key>parentDir</key>
+	<string>coverpage</string>
+	<key>dirInfo</key>
+	<dict/>
+	<key>content</key>
+	<array>
+		<dict>
+			<key>description</key>
+			<string>Intern at Facebook for the coming summer</string>
+			<key>image</key>
+			<string>facebook.jpg</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>Interned at SAP, built the iOS version of one of the BI suites</string>
+			<key>image</key>
+			<string>sap.jpg</string>
+		</dict>
+	</array>
+</dict>
+</plist>

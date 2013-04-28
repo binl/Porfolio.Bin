@@ -12,8 +12,8 @@
 		<string>imoffice</string>
 		<key>later_note</key>
 		<string>later_note</string>
-		<key>sfu</key>
-		<string>sfu</string>
+		<key>SFU_mportal</key>
+		<string>SFU_mportal</string>
 	</dict>
 	<key>content</key>
 	<array>
@@ -39,7 +39,7 @@
 			<key>image</key>
 			<string>sfu.jpg</string>
 			<key>sub_dir</key>
-			<string>sfu</string>
+			<string>SFU_mportal</string>
 		</dict>
 	</array>
 </dict>

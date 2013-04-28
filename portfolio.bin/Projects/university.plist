@@ -3,38 +3,38 @@
 <plist version="1.0">
 <dict>
 	<key>title</key>
-	<string>SFU Portal</string>
+	<string>Education</string>
 	<key>parentDir</key>
-	<string>dev_projects</string>
+	<string>coverpage</string>
 	<key>dirInfo</key>
 	<dict/>
 	<key>app_url</key>
-	<string>https://itunes.apple.com/us/app/sfu/id399178079?mt=8</string>
+	<string></string>
 	<key>content</key>
 	<array>
 		<dict>
 			<key>description</key>
-			<string>My very first iPhone application!</string>
+			<string>Grad School, had so much fun coding here! Met a bunch of smart people, so worth it!</string>
 			<key>image</key>
-			<string>sfu_first.png</string>
+			<string>cmu.png</string>
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>It was a course project, yet we made to the University Newspaper</string>
+			<string>My beloved undergrad years, spent 4 years coding and WOWing</string>
 			<key>image</key>
-			<string>newspaper.png</string>
+			<string>zju.JPG</string>
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>I&apos;m sooo proud of it!</string>
+			<string>Exchanged here for a year, where I started iOS development</string>
 			<key>image</key>
-			<string>homepage.png</string>
+			<string>sfu.png</string>
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>You could login with your SFU ID and do everything on your phone!</string>
+			<string>Made me who I am, my middle/high school</string>
 			<key>image</key>
-			<string>screen.png</string>
+			<string>hfls.jpg</string>
 		</dict>
 	</array>
 </dict>

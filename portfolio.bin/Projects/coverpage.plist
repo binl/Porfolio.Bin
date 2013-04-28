@@ -8,6 +8,8 @@
 	<dict>
 		<key>dev_projects</key>
 		<string>dev_projects</string>
+		<key>university</key>
+		<string>university</string>
 		<key>.contact_me</key>
 		<string>contact_me</string>
 	</dict>
@@ -23,11 +25,19 @@
 		</dict>
 		<dict>
 			<key>description</key>
+			<string>Internships</string>
+			<key>image</key>
+			<string>internships.jpg</string>
+			<key>sub_dir</key>
+			<string>internships</string>
+		</dict>
+		<dict>
+			<key>description</key>
 			<string>The people who taught me everything</string>
 			<key>image</key>
-			<string>education.png</string>
+			<string>education.jpg</string>
 			<key>sub_dir</key>
-			<string>education</string>
+			<string>university</string>
 		</dict>
 	</array>
 </dict>

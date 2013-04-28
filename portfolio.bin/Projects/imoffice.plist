@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>title</key>
-	<string>Later Note</string>
+	<string>An IM System</string>
 	<key>parentDir</key>
-	<string>coverpage</string>
+	<string>dev_projects</string>
 	<key>dirInfo</key>
 	<dict/>
 	<key>app_url</key>
@@ -14,33 +14,33 @@
 	<array>
 		<dict>
 			<key>description</key>
-			<string>Later Note, for lazy dudes like me XD</string>
+			<string>Took the job to build a iphone version of an existing PC IM system</string>
 			<key>image</key>
-			<string>cover.png</string>
+			<string>im_cover.png</string>
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>Started just to address my personal urgent needs</string>
+			<string>2-man team, he did network layer and I did the rest</string>
 			<key>image</key>
-			<string>angry_girlfriend.jpg</string>
+			<string>2-man.png</string>
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>I hate it that when I set reminders, I have to scroll to a specific time</string>
+			<string>50k lines of code, finished within 3 month</string>
 			<key>image</key>
-			<string>classic_alarm.png</string>
+			<string>finish.png</string>
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>So I did this instead!</string>
+			<string>But it&apos;s Chinese market only for now :-(</string>
 			<key>image</key>
-			<string>our_timer.png</string>
+			<string>chinese.png</string>
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>Then I added built-in achievements to reward myself</string>
+			<string>The user base was 100k level, so we have to address tons of issues</string>
 			<key>image</key>
-			<string>achievements.png</string>
+			<string>userbase.png</string>
 		</dict>
 	</array>
 </dict>
