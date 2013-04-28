@@ -40,6 +40,11 @@
 		CA089654172DA02000A15890 /* side-projects.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA089651172DA02000A15890 /* side-projects.plist */; };
 		CA089656172DA13C00A15890 /* side-projects.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA089655172DA13C00A15890 /* side-projects.jpg */; };
 		CA089658172DA24800A15890 /* cmuTA.jpg in Resources */ = {isa = PBXBuildFile; fileRef = CA089657172DA24800A15890 /* cmuTA.jpg */; };
+		CA08965E172DC38700A15890 /* yahoo.png in Resources */ = {isa = PBXBuildFile; fileRef = CA08965A172DC38700A15890 /* yahoo.png */; };
+		CA08965F172DC38700A15890 /* artists.png in Resources */ = {isa = PBXBuildFile; fileRef = CA08965B172DC38700A15890 /* artists.png */; };
+		CA089660172DC38700A15890 /* blur.png in Resources */ = {isa = PBXBuildFile; fileRef = CA08965C172DC38700A15890 /* blur.png */; };
+		CA089661172DC38700A15890 /* credits.plist in Resources */ = {isa = PBXBuildFile; fileRef = CA08965D172DC38700A15890 /* credits.plist */; };
+		CA089663172DC46D00A15890 /* credits.png in Resources */ = {isa = PBXBuildFile; fileRef = CA089662172DC46D00A15890 /* credits.png */; };
 		CA3C96E71729C45700E9FAC1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3C96E61729C45700E9FAC1 /* UIKit.framework */; };
 		CA3C96E91729C45700E9FAC1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3C96E81729C45700E9FAC1 /* Foundation.framework */; };
 		CA3C96EB1729C45700E9FAC1 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CA3C96EA1729C45700E9FAC1 /* CoreGraphics.framework */; };
@@ -111,6 +116,11 @@
 		CA089651172DA02000A15890 /* side-projects.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "side-projects.plist"; sourceTree = "<group>"; };
 		CA089655172DA13C00A15890 /* side-projects.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "side-projects.jpg"; sourceTree = "<group>"; };
 		CA089657172DA24800A15890 /* cmuTA.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cmuTA.jpg; sourceTree = "<group>"; };
+		CA08965A172DC38700A15890 /* yahoo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yahoo.png; sourceTree = "<group>"; };
+		CA08965B172DC38700A15890 /* artists.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = artists.png; sourceTree = "<group>"; };
+		CA08965C172DC38700A15890 /* blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blur.png; sourceTree = "<group>"; };
+		CA08965D172DC38700A15890 /* credits.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credits.plist; sourceTree = "<group>"; };
+		CA089662172DC46D00A15890 /* credits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credits.png; sourceTree = "<group>"; };
 		CA3C96E31729C45700E9FAC1 /* portfolio.bin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = portfolio.bin.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3C96E61729C45700E9FAC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA3C96E81729C45700E9FAC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -177,6 +187,7 @@
 		CA089602172CC62700A15890 /* coverpage */ = {
 			isa = PBXGroup;
 			children = (
+				CA089662172DC46D00A15890 /* credits.png */,
 				CA089655172DA13C00A15890 /* side-projects.jpg */,
 				CA08964C172D99EF00A15890 /* internships.jpg */,
 				CA08963F172D8A4600A15890 /* education.jpg */,
@@ -249,6 +260,16 @@
 				CA089650172DA02000A15890 /* mobidr.png */,
 			);
 			path = "side-projects";
+			sourceTree = "<group>";
+		};
+		CA089659172DC38700A15890 /* credits */ = {
+			isa = PBXGroup;
+			children = (
+				CA08965A172DC38700A15890 /* yahoo.png */,
+				CA08965B172DC38700A15890 /* artists.png */,
+				CA08965C172DC38700A15890 /* blur.png */,
+			);
+			path = credits;
 			sourceTree = "<group>";
 		};
 		CA3C96DA1729C45700E9FAC1 = {
@@ -376,6 +397,8 @@
 		CA3C976C172B5BA900E9FAC1 /* Projects */ = {
 			isa = PBXGroup;
 			children = (
+				CA089659172DC38700A15890 /* credits */,
+				CA08965D172DC38700A15890 /* credits.plist */,
 				CA08964E172DA02000A15890 /* side-projects */,
 				CA089651172DA02000A15890 /* side-projects.plist */,
 				CA089645172D91F100A15890 /* Internships */,
@@ -527,6 +550,11 @@
 				CA089654172DA02000A15890 /* side-projects.plist in Resources */,
 				CA089656172DA13C00A15890 /* side-projects.jpg in Resources */,
 				CA089658172DA24800A15890 /* cmuTA.jpg in Resources */,
+				CA08965E172DC38700A15890 /* yahoo.png in Resources */,
+				CA08965F172DC38700A15890 /* artists.png in Resources */,
+				CA089660172DC38700A15890 /* blur.png in Resources */,
+				CA089661172DC38700A15890 /* credits.plist in Resources */,
+				CA089663172DC46D00A15890 /* credits.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

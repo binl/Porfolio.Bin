@@ -12,6 +12,8 @@
 		<string>side-projects</string>
 		<key>university</key>
 		<string>university</string>
+		<key>credits</key>
+		<string>credits</string>
 		<key>.contact_me</key>
 		<string>contact_me</string>
 	</dict>
@@ -48,6 +50,14 @@
 			<string>side-projects.jpg</string>
 			<key>sub_dir</key>
 			<string>side-projects</string>
+		</dict>
+		<dict>
+			<key>description</key>
+			<string>HUGE THANK YOU</string>
+			<key>image</key>
+			<string>credits.png</string>
+			<key>sub_dir</key>
+			<string>credits</string>
 		</dict>
 	</array>
 </dict>
