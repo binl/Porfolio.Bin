@@ -8,11 +8,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "portfolio.bin/showcaseTableCells/CNShowProjCell.m"
-         timestampString = "388871499.885607"
+         timestampString = "389208044.743534"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "99"
-         endingLineNumber = "99"
+         startingLineNumber = "104"
+         endingLineNumber = "104"
          landmarkName = "-loadScrollViewWithPage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -21,11 +21,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "portfolio.bin/showcaseTableCells/CNShowProjCell.m"
-         timestampString = "388871499.885607"
+         timestampString = "389208044.743534"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "116"
-         endingLineNumber = "116"
+         startingLineNumber = "121"
+         endingLineNumber = "121"
          landmarkName = "-loadScrollViewWithPage:"
          landmarkType = "5">
       </FileBreakpoint>
@@ -34,11 +34,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "portfolio.bin/showcaseTableCells/CNShowProjCell.m"
-         timestampString = "388871499.885607"
+         timestampString = "389208044.743534"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "144"
-         endingLineNumber = "144"
+         startingLineNumber = "149"
+         endingLineNumber = "149"
          landmarkName = "-openInAppStore:"
          landmarkType = "5">
       </FileBreakpoint>

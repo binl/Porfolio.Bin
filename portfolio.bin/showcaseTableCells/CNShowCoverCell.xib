@@ -118,13 +118,14 @@
 												<string key="NSFrame">{{150, 87}, {157, 26}}</string>
 												<reference key="NSSuperview" ref="682772156"/>
 												<reference key="NSWindow"/>
+												<reference key="NSNextKeyView"/>
 												<string key="NSReuseIdentifierKey">_NS:9</string>
 												<bool key="IBUIOpaque">NO</bool>
 												<bool key="IBUIClipsSubviews">YES</bool>
 												<int key="IBUIContentMode">7</int>
 												<bool key="IBUIUserInteractionEnabled">NO</bool>
 												<string key="targetRuntimeIdentifier">IBCocoaTouchFramework</string>
-												<string key="IBUIText">iOS/Kernel Developer</string>
+												<string key="IBUIText">iOS/Kernel Enthusiast</string>
 												<reference key="IBUITextColor" ref="692296942"/>
 												<nil key="IBUIHighlightedColor"/>
 												<int key="IBUIBaselineAdjustment">0</int>
@@ -159,6 +160,7 @@
 								<string key="NSFrameSize">{320, 440}</string>
 								<reference key="NSSuperview" ref="366382908"/>
 								<reference key="NSWindow"/>
+								<reference key="NSNextKeyView" ref="682772156"/>
 								<string key="NSReuseIdentifierKey">_NS:9</string>
 								<object class="NSColor" key="IBUIBackgroundColor" id="538892634">
 									<int key="NSColorSpace">3</int>

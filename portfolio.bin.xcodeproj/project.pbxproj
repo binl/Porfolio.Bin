@@ -82,6 +82,7 @@
 		CAFF64A91732BABC00F909F1 /* 114icon(1).png in Resources */ = {isa = PBXBuildFile; fileRef = CAFF64A81732BABC00F909F1 /* 114icon(1).png */; };
 		CAFF64AB1732BE4B00F909F1 /* side-projects.png in Resources */ = {isa = PBXBuildFile; fileRef = CAFF64AA1732BE4B00F909F1 /* side-projects.png */; };
 		CAFF64AD1732C10800F909F1 /* button_down.png in Resources */ = {isa = PBXBuildFile; fileRef = CAFF64AC1732C10800F909F1 /* button_down.png */; };
+		CAFF64AF1732DB2800F909F1 /* minzhao.png in Resources */ = {isa = PBXBuildFile; fileRef = CAFF64AE1732DB2800F909F1 /* minzhao.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -120,7 +121,7 @@
 		CA08965C172DC38700A15890 /* blur.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blur.png; sourceTree = "<group>"; };
 		CA08965D172DC38700A15890 /* credits.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = credits.plist; sourceTree = "<group>"; };
 		CA089662172DC46D00A15890 /* credits.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = credits.png; sourceTree = "<group>"; };
-		CA3C96E31729C45700E9FAC1 /* portfolio.bin.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = portfolio.bin.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		CA3C96E31729C45700E9FAC1 /* Bin Liu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Bin Liu.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA3C96E61729C45700E9FAC1 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		CA3C96E81729C45700E9FAC1 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		CA3C96EA1729C45700E9FAC1 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -171,6 +172,7 @@
 		CAFF64A81732BABC00F909F1 /* 114icon(1).png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "114icon(1).png"; sourceTree = "<group>"; };
 		CAFF64AA1732BE4B00F909F1 /* side-projects.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "side-projects.png"; sourceTree = "<group>"; };
 		CAFF64AC1732C10800F909F1 /* button_down.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = button_down.png; sourceTree = "<group>"; };
+		CAFF64AE1732DB2800F909F1 /* minzhao.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = minzhao.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,6 +270,7 @@
 		CA089659172DC38700A15890 /* credits */ = {
 			isa = PBXGroup;
 			children = (
+				CAFF64AE1732DB2800F909F1 /* minzhao.png */,
 				CA08965A172DC38700A15890 /* yahoo.png */,
 				CA08965B172DC38700A15890 /* artists.png */,
 				CA08965C172DC38700A15890 /* blur.png */,
@@ -289,7 +292,7 @@
 		CA3C96E41729C45700E9FAC1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				CA3C96E31729C45700E9FAC1 /* portfolio.bin.app */,
+				CA3C96E31729C45700E9FAC1 /* Bin Liu.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -466,7 +469,7 @@
 			);
 			name = portfolio.bin;
 			productName = portfolio.bin;
-			productReference = CA3C96E31729C45700E9FAC1 /* portfolio.bin.app */;
+			productReference = CA3C96E31729C45700E9FAC1 /* Bin Liu.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -563,6 +566,7 @@
 				CAFF64A91732BABC00F909F1 /* 114icon(1).png in Resources */,
 				CAFF64AB1732BE4B00F909F1 /* side-projects.png in Resources */,
 				CAFF64AD1732C10800F909F1 /* button_down.png in Resources */,
+				CAFF64AF1732DB2800F909F1 /* minzhao.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -670,7 +674,7 @@
 				GCC_PREFIX_HEADER = "portfolio.bin/portfolio.bin-Prefix.pch";
 				INFOPLIST_FILE = "portfolio.bin/portfolio.bin-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bin Liu";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -682,7 +686,7 @@
 				GCC_PREFIX_HEADER = "portfolio.bin/portfolio.bin-Prefix.pch";
 				INFOPLIST_FILE = "portfolio.bin/portfolio.bin-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = "Bin Liu";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;

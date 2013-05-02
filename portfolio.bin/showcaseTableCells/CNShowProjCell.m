@@ -39,8 +39,13 @@ static NSInteger kDelta = 0;
     self.contentList = [projectInfo objectForKey:@"content"];
     
     self.labelTitle.text = [projectInfo objectForKey:@"title"];
+   
     self._app_url = [projectInfo objectForKey:@"app_url"];
-    
+    if (self._app_url == NULL) {
+        [btnAppStore setHidden:YES];
+    }
+    else
+        [btnAppStore setHidden:NO];
     // Background setup
     if (self.bgView == NULL) {
         self.bgView = [[UIView alloc] initWithFrame:CGRectMake(15, 5, 290, 400 + kDelta)];
