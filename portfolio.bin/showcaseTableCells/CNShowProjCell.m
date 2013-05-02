@@ -5,6 +5,7 @@
 //  Created by Lenix Liu on 13-4-25.
 //  Copyright (c) 2013年 Bin Liu. All rights reserved.
 //
+//
 
 #import "CNShowProjCell.h"
 
@@ -30,7 +31,7 @@ static NSInteger kDelta = 0;
 @synthesize viewControllers, contentList, _app_url;
 @synthesize mainView;
 
-- (void)initCellWithProject:(NSString *)projName{
+- (void)initCellWithProject:(NSString *)projName startAtDir:(NSString *)subDir{
     [btnAppStore setBackgroundImage:[UIImage imageNamed:@"button_down.png"]
                            forState:UIControlStateHighlighted];
     
@@ -87,12 +88,15 @@ static NSInteger kDelta = 0;
     [doubleTap setNumberOfTouchesRequired:1];
     [self.scrollShowCase addGestureRecognizer:doubleTap];
     
+    NSInteger startAtPage = 0;
+    for (int i = 0; i < self.contentList.count ; i++) {
+        if ([[[self.contentList objectAtIndex:i] objectForKey:@"sub_dir"] isEqualToString:subDir]) {
+            startAtPage = i;
+        }
+        [self loadScrollViewWithPage:i];
+    }
     
-    // load the visible page
-    // load the page on either side to avoid flashes when the user starts scrolling
-    [self loadScrollViewWithPage:0];
-    [self loadScrollViewWithPage:1];
-    [self loadScrollViewWithPage:2];
+    self.scrollShowCase.contentOffset = CGPointMake((CONTENT_WIDTH + PAGE_PADDING)* startAtPage, 0);
 }
 
 - (void)loadScrollViewWithPage:(NSUInteger)page

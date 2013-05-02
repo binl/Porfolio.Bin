@@ -24,7 +24,7 @@
 
 @property (strong, nonatomic) NSString *_app_url;
 
-- (void)initCellWithProject:(NSString *)projName;
+- (void)initCellWithProject:(NSString *)projName startAtDir:(NSString *)subDir;
 
 - (IBAction)openInAppStore:(id)sender;
 @end

@@ -123,7 +123,7 @@
                         <action selector="dismissShell:" destination="2" id="MUP-lU-SnK"/>
                     </connections>
                 </swipeGestureRecognizer>
-                <swipeGestureRecognizer direction="down" id="cHa-nw-fJP">
+                <swipeGestureRecognizer direction="right" id="cHa-nw-fJP">
                     <connections>
                         <action selector="dismissShell:" destination="2" id="2g6-40-PAH"/>
                     </connections>

@@ -37,6 +37,7 @@ static NSInteger delta = 0;
     UIImage *_blurred_bg;
     
     NSString *_currentShow;
+    NSString *_prevShow;
     
     CNExtHeaderVIew *_extHdr;
     
@@ -77,7 +78,7 @@ static NSInteger delta = 0;
     }
 
     _currentShow = @"coverpage";
-    
+    _prevShow = NULL;
     NSString *path = [[NSBundle mainBundle] pathForResource:_currentShow ofType:@"plist"];
     _curDirInfo = [NSDictionary dictionaryWithContentsOfFile:path];
 }
@@ -170,7 +171,7 @@ static NSInteger delta = 0;
         [(CNShowCoverCell *)cell initCell];
     }
     else {
-        [(CNShowProjCell *)cell initCellWithProject:_currentShow];
+        [(CNShowProjCell *)cell initCellWithProject:_currentShow startAtDir:_prevShow];
         [(CNShowProjCell *)cell setMainView:self];
     }
     
@@ -274,6 +275,7 @@ static NSInteger delta = 0;
                 self.lblShellOutput.text = @"We are in Root Directory already";
                 return;
             }
+            _prevShow = _currentShow;
             _currentShow = parentDir;
             [self updateCurDirInfo];
             [self updateContentWillStepIn:NO];
@@ -285,6 +287,7 @@ static NSInteger delta = 0;
                 self.lblShellOutput.text = @"Directory not found";
                 return;
             }
+            _prevShow = NULL;
             _currentShow = childDir;
             [self updateCurDirInfo];
             [self updateContentWillStepIn:YES];
@@ -345,6 +348,7 @@ static NSInteger delta = 0;
     if (childDir == NULL) {
         return;
     }
+    _prevShow = NULL;
     _currentShow = childDir;
     [self updateCurDirInfo];
     [self.tableShowcase setContentOffset:CGPointMake(0, 440 + delta) animated:YES];
@@ -356,6 +360,7 @@ static NSInteger delta = 0;
     if (parentDir == NULL) {
         return;
     }
+    _prevShow = _currentShow;
     _currentShow = parentDir;
     [self updateCurDirInfo];
     [self.tableShowcase setContentOffset:CGPointMake(0, 440 + delta) animated:YES];

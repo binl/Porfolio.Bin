@@ -21,7 +21,7 @@
 	<array>
 		<dict>
 			<key>description</key>
-			<string>Where I fell for coding</string>
+			<string>How I fell for coding</string>
 			<key>image</key>
 			<string>dev_projects.png</string>
 			<key>sub_dir</key>
