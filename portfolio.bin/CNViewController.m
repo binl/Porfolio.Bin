@@ -39,10 +39,15 @@ static NSInteger delta = 0;
     NSString *_currentShow;
     
     CNExtHeaderVIew *_extHdr;
+    
+    NSDictionary *_curDirInfo;
+    
+    UIButton *_btnBack;
+    UIButton *_btnShell;
 }
 
 -(void)updateContentWillStepIn:(BOOL)isStepIn;
-
+-(void)updateCurDirInfo;
 @end
 
 @implementation CNViewController
@@ -72,6 +77,9 @@ static NSInteger delta = 0;
     }
 
     _currentShow = @"coverpage";
+    
+    NSString *path = [[NSBundle mainBundle] pathForResource:_currentShow ofType:@"plist"];
+    _curDirInfo = [NSDictionary dictionaryWithContentsOfFile:path];
 }
 
 
@@ -97,23 +105,33 @@ static NSInteger delta = 0;
     CNNavHeaderView *hdrView = [[CNNavHeaderView alloc] initWithFrame:
                        CGRectMake(0, 0, SECTION_HDR_WIDTH, SECTION_HDR_HEIGHT)];
     
-    UIButton *btnShell = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btnShell setTitle:@">_ " forState:UIControlStateNormal];
-    [btnShell.titleLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:20]];
-    [btnShell setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    [btnShell setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
-    [btnShell addTarget:self action:@selector(displayShell) forControlEvents:UIControlEventTouchUpInside];
-    btnShell.frame = CGRectMake(270, 0, 40, 40);
+    if (_btnShell == NULL) {
+        UIButton *btnShell = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btnShell setTitle:@">_ " forState:UIControlStateNormal];
+        [btnShell.titleLabel setFont:[UIFont fontWithName:@"Helvetica-Bold" size:20]];
+        [btnShell setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+        [btnShell setTitleColor:[UIColor blackColor] forState:UIControlStateHighlighted];
+        [btnShell addTarget:self action:@selector(displayShell) forControlEvents:UIControlEventTouchUpInside];
+        btnShell.frame = CGRectMake(270, 0, 40, 40);
+        _btnShell = btnShell;
+    }
     
-    [hdrView addSubview:btnShell];
+    [hdrView addSubview:_btnShell];
     
-    UIButton *btnBack = [UIButton buttonWithType:UIButtonTypeCustom];
-    [btnBack setImage:[UIImage imageNamed:@"arrow_black"] forState:UIControlStateHighlighted];
-    [btnBack setImage:[UIImage imageNamed:@"arrow_white"] forState:UIControlStateNormal];
-    [btnBack addTarget:self action:@selector(stepOutOfFolder) forControlEvents:UIControlEventTouchUpInside];
-    btnBack.frame = CGRectMake(5, 5, 30, 30);
+    if ([_curDirInfo objectForKey:@"parentDir"] == NULL) {
+        return hdrView;
+    }
     
-    [hdrView addSubview:btnBack];
+    if (_btnBack == NULL) {
+        UIButton *btnBack = [UIButton buttonWithType:UIButtonTypeCustom];
+        [btnBack setImage:[UIImage imageNamed:@"arrow_black"] forState:UIControlStateHighlighted];
+        [btnBack setImage:[UIImage imageNamed:@"arrow_white"] forState:UIControlStateNormal];
+        [btnBack addTarget:self action:@selector(stepOutOfFolder) forControlEvents:UIControlEventTouchUpInside];
+        btnBack.frame = CGRectMake(5, 5, 30, 30);
+        _btnBack = btnBack;
+    }
+    
+    [hdrView addSubview:_btnBack];
     
     return hdrView;
 }
@@ -217,6 +235,7 @@ static NSInteger delta = 0;
 #pragma mark - textfield delegates
 - (BOOL)textFieldShouldBeginEditing:(UITextField *)textField{
     [self.tableShowcase setContentOffset:CGPointMake(0, 440 + delta) animated:YES];
+    self.lblShellOutput.text = HELP_MSG;
     [self.viewShellOverlay setHidden:NO];
     return YES;
 }
@@ -230,17 +249,12 @@ static NSInteger delta = 0;
     
     [self parseline:textField.text];
     textField.text = @"";
-    //_currentShow = textField.text;
-    //[self dismissShell:nil];
     return YES;
 }
 
 
 #pragma mark - shell parseline
 -(void)parseline:(NSString *)input {
-    NSString *path = [[NSBundle mainBundle] pathForResource:_currentShow ofType:@"plist"];
-    NSDictionary *currentFolderInfo = [NSDictionary dictionaryWithContentsOfFile:path];
-    
     BOOL hide_contact = YES;
     NSArray *inputParts = [input componentsSeparatedByString:@" "];
     if (inputParts.count > 2 || inputParts.count == 0) {
@@ -255,27 +269,29 @@ static NSInteger delta = 0;
         
         NSString *targetFolder = [inputParts objectAtIndex:1];
         if ([targetFolder isEqualToString:@".."]) {
-            NSString *parentDir = [currentFolderInfo objectForKey:@"parentDir"];
+            NSString *parentDir = [_curDirInfo objectForKey:@"parentDir"];
             if (parentDir == NULL) {
                 self.lblShellOutput.text = @"We are in Root Directory already";
                 return;
             }
             _currentShow = parentDir;
+            [self updateCurDirInfo];
             [self updateContentWillStepIn:NO];
         }
         else {
-            NSDictionary *childDirs = [currentFolderInfo objectForKey:@"dirInfo"];
+            NSDictionary *childDirs = [_curDirInfo objectForKey:@"dirInfo"];
             NSString *childDir = [childDirs objectForKey:targetFolder];
             if (childDir == NULL) {
                 self.lblShellOutput.text = @"Directory not found";
                 return;
             }
             _currentShow = childDir;
+            [self updateCurDirInfo];
             [self updateContentWillStepIn:YES];
         }
     }
     else if ([command isEqualToString:@"ls"]) {
-        NSArray *list = [[currentFolderInfo objectForKey:@"dirInfo"] allKeys];
+        NSArray *list = [[_curDirInfo objectForKey:@"dirInfo"] allKeys];
         if (list.count == 0) {
             self.lblShellOutput.text = @"Directory Empty";
         }
@@ -314,7 +330,8 @@ static NSInteger delta = 0;
         thisAnimation = UITableViewRowAnimationRight;
     }
     
-    [self.tableShowcase reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:1 inSection:0]] withRowAnimation:thisAnimation];
+    [self.tableShowcase reloadSections:[NSIndexSet indexSetWithIndex:0] withRowAnimation:thisAnimation];
+    //[self.tableShowcase reloadRowsAtIndexPaths:[NSArray arrayWithObject:[NSIndexPath indexPathForRow:1 inSection:0]] withRowAnimation:thisAnimation];
     
     [self.txtShellInput resignFirstResponder];
     [self.viewShellOverlay setHidden:YES];
@@ -322,31 +339,32 @@ static NSInteger delta = 0;
 
 #pragma mark - Folder operation actions
 -(void)stepIntoFolderNum:(NSUInteger)page{
-    NSString *path = [[NSBundle mainBundle] pathForResource:_currentShow ofType:@"plist"];
-    NSDictionary *currentFolderInfo = [NSDictionary dictionaryWithContentsOfFile:path];
-    
-    NSArray *childDirs = [currentFolderInfo objectForKey:@"content"];
+    NSArray *childDirs = [_curDirInfo objectForKey:@"content"];
 
     NSString *childDir = [[childDirs objectAtIndex:page] objectForKey:@"sub_dir"];
     if (childDir == NULL) {
         return;
     }
     _currentShow = childDir;
+    [self updateCurDirInfo];
     [self.tableShowcase setContentOffset:CGPointMake(0, 440 + delta) animated:YES];
     [self updateContentWillStepIn:YES];
 }
 
 -(void)stepOutOfFolder{
-    NSString *path = [[NSBundle mainBundle] pathForResource:_currentShow ofType:@"plist"];
-    NSDictionary *currentFolderInfo = [NSDictionary dictionaryWithContentsOfFile:path];
-    
-    NSString *parentDir = [currentFolderInfo objectForKey:@"parentDir"];
+    NSString *parentDir = [_curDirInfo objectForKey:@"parentDir"];
     if (parentDir == NULL) {
         return;
     }
     _currentShow = parentDir;
+    [self updateCurDirInfo];
     [self.tableShowcase setContentOffset:CGPointMake(0, 440 + delta) animated:YES];
     [self updateContentWillStepIn:NO];
+}
+
+-(void)updateCurDirInfo {
+    NSString *path = [[NSBundle mainBundle] pathForResource:_currentShow ofType:@"plist"];
+    _curDirInfo = [NSDictionary dictionaryWithContentsOfFile:path];
 }
 
 @end

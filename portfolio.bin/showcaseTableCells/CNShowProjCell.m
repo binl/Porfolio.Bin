@@ -31,7 +31,7 @@ static NSInteger kDelta = 0;
 @synthesize mainView;
 
 - (void)initCellWithProject:(NSString *)projName{
-    [btnAppStore setBackgroundImage:[UIImage imageNamed:@"test_cover.jpg"]
+    [btnAppStore setBackgroundImage:[UIImage imageNamed:@"button_down.png"]
                            forState:UIControlStateHighlighted];
     
     NSString *path = [[NSBundle mainBundle] pathForResource:projName ofType:@"plist"];

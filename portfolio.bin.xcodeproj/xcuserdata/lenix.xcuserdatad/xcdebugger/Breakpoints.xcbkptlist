@@ -47,11 +47,11 @@
          ignoreCount = "0"
          continueAfterRunningActions = "No"
          filePath = "portfolio.bin/CNViewController.m"
-         timestampString = "388870553.990398"
+         timestampString = "389207440.300336"
          startingColumnNumber = "9223372036854775807"
          endingColumnNumber = "9223372036854775807"
-         startingLineNumber = "277"
-         endingLineNumber = "277"
+         startingLineNumber = "293"
+         endingLineNumber = "293"
          landmarkName = "-parseline:"
          landmarkType = "5">
       </FileBreakpoint>

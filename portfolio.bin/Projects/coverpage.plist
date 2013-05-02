@@ -21,7 +21,7 @@
 	<array>
 		<dict>
 			<key>description</key>
-			<string>iOS Projects</string>
+			<string>Where I fell for coding</string>
 			<key>image</key>
 			<string>dev_projects.png</string>
 			<key>sub_dir</key>
@@ -29,9 +29,9 @@
 		</dict>
 		<dict>
 			<key>description</key>
-			<string>Internships</string>
+			<string>Industrial Training</string>
 			<key>image</key>
-			<string>internships.jpg</string>
+			<string>internships.png</string>
 			<key>sub_dir</key>
 			<string>internships</string>
 		</dict>
@@ -39,7 +39,7 @@
 			<key>description</key>
 			<string>The people who taught me everything</string>
 			<key>image</key>
-			<string>education.jpg</string>
+			<string>education.png</string>
 			<key>sub_dir</key>
 			<string>university</string>
 		</dict>
@@ -47,7 +47,7 @@
 			<key>description</key>
 			<string>Some side projects~~</string>
 			<key>image</key>
-			<string>side-projects.jpg</string>
+			<string>side-projects.png</string>
 			<key>sub_dir</key>
 			<string>side-projects</string>
 		</dict>
